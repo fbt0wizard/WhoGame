@@ -49,7 +49,29 @@
       </header>
 
       <div class="who">
-        <img src="/images/guess.svg" alt="Guess the person" width="200px" />
+        <img src="/images/guess.svg" alt="Guess the person" width="200px" /> <p>Who is this?</p>
+      </div>
+
+      <div class="mark" id="marks">
+        <img
+          id="correct"
+          src="/images/correct.png"
+          alt="correct"
+          width="90px"
+        />
+        <img id="wrong" src="/images/wrong.png" alt="wrong" width="90px" />
+      </div>
+
+      <div class="answer">
+        <input type="text" name="answer" id="answerText" />
+        <div class="submit">
+          <input
+            type="button"
+            value="CHECK ANSWER"
+            id="checkButton"
+            onclick="getInput2()"
+          />
+        </div>
       </div>
     </div>
 

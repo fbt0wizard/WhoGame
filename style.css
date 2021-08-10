@@ -35,7 +35,7 @@ body {
 
 .footer {
     text-align: center;
-    background: rgba(0, 0, 0, 0.658);
+    background: rgba(0, 0, 0, 0.822);
     color: #ecf0f1;
     padding: 2rem 0;
 }
@@ -50,10 +50,31 @@ body {
 }
 .who {
     text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.mark {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.answer {
+    text-align: center;
     margin-bottom: 3rem;
 }
+
+#checkButton {
+    background: #fff;
+    border: 2px solid blue;
+    padding: 8px 18px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 2rem;
+}
+
 @media only screen and (max-width: 740px) {
     body {
-        margin: 2rem 2rem 0 2rem; 
+        margin: 2rem 0 0 0; 
     }
 }
