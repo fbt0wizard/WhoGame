@@ -34,15 +34,28 @@ function alertUserInput() {
 
 function getInput2() {
   window.userInput2 = document.getElementById('answerText').value;
-  const buhari = "black nigerian politician black alive black african above50 male";
+  console.log(userInput2.length);
+  if(userInput2 == 0) {
+    alert("Please Input Answer");
+    return;
+  }
+  const buhari = "black nigerian politician alive african above50 male president west africa";
   var data = userInput2;
   console.log(buhari.includes(data));
   if(buhari.includes(data) == true) {
     let score = document.getElementById("correct");
     score.style.visibility = "visible";
+    setTimeout(() => {
+      score.style.visibility = "hidden";
+    }, 3000)
+    
+  
   } else {
     let score2 = document.getElementById("wrong")
     score2.style.visibility = "visible";
+    setTimeout(() => {
+      score2.style.visibility = "hidden";
+    }, 3000)
   }
     
 }

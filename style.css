@@ -23,7 +23,7 @@ body {
 }
 
 .start-game {
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 #subButton {
@@ -42,6 +42,7 @@ body {
 
 .game-section {
     display: none;
+    margin-top: -33px;
 }
 
 #user-name {
@@ -51,6 +52,10 @@ body {
 .who {
     text-align: center;
     margin-bottom: 1.5rem;
+}
+
+.who h2 {
+    color: blue;
 }
 
 .mark {
