@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GUESS WHO?</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="first-section" id="firstSection">
+      <header class="welcome">
+        <h1>GUESS WHO?</h1>
+        <h2>
+          This is an educative game that is all about guessing <br />the name of
+          a porpular person
+        </h2>
+      </header>
+
+      <div class="body">
+        <h2 id="heading">please input your name and number.</h2>
+        <div class="user-record">
+          <form name="myform" method="GET">
+            <input
+              type="text"
+              name="inputbox"
+              id="userInput"
+              value=""
+              placeholder="Name"
+              required
+            />
+
+            <div class="start-game">
+              <input
+                type="button"
+                value="Start Game"
+                id="subButton"
+                onClick="getInput()"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-section" id="gameSection">
+      <header class="welcome-player">
+        <h1 id="user-name"></h1>
+      </header>
+
+      <div class="who">
+        <img src="/images/guess.svg" alt="Guess the person" width="200px" />
+      </div>
+    </div>
+
+    <footer class="footer">
+      <h3>This is a javascrypt project by<br />Oladipo Mustapha</h3>
+    </footer>
+
+    <script src="app1.js"></script>
+  </body>
+</html>

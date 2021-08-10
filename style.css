@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #ecf0f1;
+    margin: 4rem 9rem 0 9rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.welcome {
+    text-align: center;
+    color: blue;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+}
+
+.body {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.start-game {
+    margin: 2rem 0;
+}
+
+#subButton {
+    padding: 10px 17px;
+    font-size: 17px;
+    background: #fff;
+    border: 1px solid blue;
+}
+
+.footer {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.658);
+    color: #ecf0f1;
+    padding: 2rem 0;
+}
+
+.game-section {
+    display: none;
+}
+
+#user-name {
+    color: blue;
+    text-align: center;
+}
+.who {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+@media only screen and (max-width: 740px) {
+    body {
+        margin: 2rem 2rem 0 2rem; 
+    }
+}
