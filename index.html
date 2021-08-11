@@ -20,7 +20,7 @@
       <div class="body">
         <h2 id="heading">Please Input Your Name.</h2>
         <div class="user-record">
-          <form name="myform" method="GET">
+          <form name="myform">
             <input
               type="text"
               name="inputbox"
@@ -31,12 +31,14 @@
             />
 
             <div class="start-game">
-              <input
+              <button
                 type="button"
-                value="Start Game"
+                value=""
                 id="subButton"
-                onClick="getInput()"
-              />
+                onclick="getInput()"
+              >
+                Start Game
+              </button>
             </div>
           </form>
         </div>
@@ -52,6 +54,9 @@
         <img src="/images/guess.svg" alt="Guess the person" width="200px" />
         <h2>Guess Who is this?</h2>
       </div>
+      <div class="list">
+        <p id="listUp"></p>
+      </div>
 
       <div class="mark" id="marks">
         <img
@@ -64,15 +69,19 @@
       </div>
 
       <div class="answer">
-        <input type="text" name="answer" id="answerText" required />
-        <div class="submit">
-          <input
-            type="button"
-            value="CHECK ANSWER"
-            id="checkButton"
-            onclick="getInput2()"
-          />
-        </div>
+        <form>
+          <input type="text" name="answer" id="answerText" required />
+          <div class="submit">
+            <input
+              type="button"
+              value="CHECK ANSWER"
+              id="checkButton"
+              onclick="getInput2()"
+              required
+            />
+            <button type="button" onclick="clearData()">Clear</button>
+          </div>
+        </form>
       </div>
     </div>
 
