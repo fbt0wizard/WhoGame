@@ -1,104 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background: #ecf0f1;
-    margin: 4rem 9rem 0 9rem;
-    font-family: 'Lato', sans-serif;
+  background: #fff;
+  margin: 4rem 9rem 0 9rem;
+  font-family: "Lato", sans-serif;
 }
 
 .welcome {
-    text-align: center;
-    color: blue;
-    margin-bottom: 4rem;
-    margin-top: 4rem;
+  text-align: center;
+  color: blue;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
 }
 
 .body {
-    text-align: center;
-    margin-bottom: 5rem;
+  text-align: center;
+  margin-bottom: 5rem;
 }
 
 .start-game {
-    margin: 1rem 0;
+  margin: 1rem 0;
 }
 
 #subButton {
-    padding: 10px 17px;
-    font-size: 17px;
-    background: #fff;
-    border: 1px solid blue;
+  padding: 10px 17px;
+  font-size: 17px;
+  background: #fff;
+  border: 1px solid blue;
 }
 
 .footer {
-    text-align: center;
-    background: rgba(0, 0, 0, 0.822);
-    color: #ecf0f1;
-    padding: 2rem 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.822);
+  color: #ecf0f1;
+  padding: 2rem 0;
 }
 
 .game-section {
-    display: none;
-    margin-top: -33px;
+  display: none;
+  margin-top: -33px;
 }
 
 #user-name {
-    color: blue;
-    text-align: center;
+  color: blue;
+  text-align: center;
 }
 .who {
-    text-align: center;
-    margin-bottom: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .who h2 {
-    color: blue;
+  color: blue;
 }
 
 .mark {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
 }
 
 .answer {
-    text-align: center;
-    margin-bottom: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .engine-form {
-    display: inline-grid;
+  display: inline-grid;
 }
 
-
 #checkButton {
-    background: #fff;
-    border: 2px solid blue;
-    padding: 8px 18px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 2rem;
+  background: #fff;
+  border: 2px solid blue;
+  padding: 8px 18px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 2rem;
 }
 
 .reset button {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 #listUp {
-    color: green;
-    font-size: 14px;
+  color: green;
+  font-size: 14px;
 }
 
 #listUp2 {
+  color: red;
+  font-size: 14px;
+}
+.label {
+    margin-bottom: .2rem;
+}
+
+.label label {
     color: red;
+    font-size: 13px;
+}
+
+.reset-life {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 0 50px 0 50px;
+}
+
+.reset-life p {
     font-size: 14px;
+    padding: 14px;
+    border: 1px solid #fff;
+    background: #fff;
+    border-radius: 50%;
+    color: rgba(0, 0, 0, 0.527);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;;
 }
 
 @media only screen and (max-width: 740px) {
-    body {
-        margin: 2rem 0 0 0; 
-    }
+  body {
+    margin: 2rem 0 0 0;
+  }
 }

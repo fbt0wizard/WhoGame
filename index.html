@@ -21,6 +21,9 @@
         <h2 id="heading">Please Input Your Name.</h2>
         <div class="user-record">
           <form name="myform">
+            <div class="label">
+              <label id="warning" for="text"></label>
+            </div>
             <input
               type="text"
               name="inputbox"
@@ -54,12 +57,12 @@
         <img src="/images/guess.svg" alt="Guess the person" width="150px" />
         <h2>Guess Who is this?</h2>
       </div>
-      <div class="record">
-      <div class="list">
-        <p id="listUp"></p>
+      <div class="reset-life">
+      <div class="reset">
+        <button type="button" onclick="clearData()">Restart</button>
       </div>
-      <div class="list2">
-        <p id="listUp2"></p>
+      <div class="life">
+        <p><span id="counter">0</span>/10</p>
       </div>
     </div>
 
@@ -76,6 +79,9 @@
       <div class="answer">
         <div class="form1">
           <form class="engine-form">
+            <div class="label">
+              <label id="warning2" for="text"></label>
+            </div>
             <input type="text" name="answer" id="answerText" required />
 
             <input
@@ -85,12 +91,16 @@
               onclick="getInput2()"
               required
             />
-            <div class="reset">
-            <button type="submit" onclick="clearData()">Restart</button>
-          </div>
           </form>
+          <div class="record">
+            <div class="list">
+              <p id="listUp"></p>
+            </div>
+            <div class="list2">
+              <p id="listUp2"></p>
+            </div>
+          </div>
         </div>
- 
       </div>
     </div>
 
