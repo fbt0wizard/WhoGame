@@ -1,8 +1,7 @@
-// const Buhari = ("black", "Nigerian", "politician", "alive", "african", "above50", "male"); 
 // const Biden = ("american", "white", "politician", "alive", "above50", "male", "west");
 
 function getInput() {
-  window.userInput = document.getElementById('userInput').value;
+  var userInput = document.getElementById('userInput').value;
   localStorage.setItem("userEntry", userInput);
 
   let newData = localStorage.getItem('userEntry');
@@ -30,50 +29,101 @@ function getInput() {
 
 function clearData() {
   localStorage.clear();
+  location.reload();
 }
 
 var playerInput = JSON.parse(localStorage.getItem("gameInput") || "[]");
 
 
+var playerWorngInput = JSON.parse(localStorage.getItem("wrongInput") || "[]");
+
+
 function getInput2() {
-  const buhari = "black nigerian politician alive african above50 male president west africa father married ";
-  var data = document.getElementById('answerText').value;
+  const buhari = ["black", "nigerian", "politician", "alive", "african", "above50", "male", "president", "leader", "head of state", "educated", "elected", "west africa", "father", "married", "africa", "buhari", "muhammadu buhari"];
+  var fresh = document.getElementById('answerText').value;
+  let data = fresh.toLowerCase();
   if (data.length == 0) {
     alert("Please input answer");
     return;
   }
 
   var storedResult = localStorage.getItem("gameInput");
+  var storeWrong = localStorage.getItem("wrongInput");
 
-  console.log(storedResult);
+  console.log(storeWrong);
   
- 
   
-  if(storedResult == null) {
-    if (buhari.includes(data)) {
-      let score = document.getElementById("correct");
-      score.style.visibility = "visible";
-      setTimeout(() => {
-      score.style.visibility = "hidden";
-    }, 3000)
-      
-    } else {
-      let score2 = document.getElementById("wrong")
-      score2.style.visibility = "visible";
-      setTimeout(() => {
-        score2.style.visibility = "hidden";
-      }, 3000);
+   if(data == "buhari" || data == "muhammadu buhari") {
+      document.getElementById("guess").innerHTML = "<img src=\"images/buhari.jpg\" width=\"250px\">";
+      let newData = localStorage.getItem('userEntry');
+      alert("Great job" + " " + newData);
       return;
-    
-    }
-    document.getElementById("listUp").innerHTML = data;    
-  }
+   }
+ 
+
+
+  // if(storedResult == null) {
+  //   if (buhari.includes(data)) {
+  //     let score = document.getElementById("correct");
+  //     score.style.visibility = "visible";
+  //     setTimeout(() => {
+  //     score.style.visibility = "hidden";
+  //   }, 3000)
+  //     document.getElementById("listUp").innerHTML = data;
+      
+  //   } else {
+  //     let score2 = document.getElementById("wrong")
+  //     score2.style.visibility = "visible";
+  //     setTimeout(() => {
+  //       score2.style.visibility = "hidden";
+  //     }, 3000);
+
+  //   }     
+  // }
+
   if(storedResult != null) {
     if(storedResult.includes(data)) {
       alert("You can't input" + " " + data + " " + "again");
       return;
     }
+    
   }
+
+  if(storeWrong != null) {
+    if(storeWrong.includes(data)) {
+      alert("You can't input" + " " + data + " " + "again");
+      return;
+    }
+  }
+
+
+
+  // if(storeWrong == null) {
+  //   if (buhari.includes(data)) {
+  //     let score = document.getElementById("correct");
+  //     score.style.visibility = "visible";
+  //     setTimeout(() => {
+  //     score.style.visibility = "hidden";
+  //   }, 3000)
+ 
+  //   } else {
+  //     let score2 = document.getElementById("wrong")
+  //     score2.style.visibility = "visible";
+  //     setTimeout(() => {
+  //       score2.style.visibility = "hidden";
+  //     }, 3000);
+  //     // playerWorngInput.push(data);
+    
+  //     // localStorage.setItem("wrongInput", JSON.stringify(playerWorngInput));
+  //     // return;
+  //   }     
+  //  } else {
+  //       playerWorngInput.push(data);
+    
+  //       localStorage.setItem("wrongInput", JSON.stringify(playerWorngInput));
+  //       return;
+  //  }
+  
   if (buhari.includes(data)) {
     let score = document.getElementById("correct");
     score.style.visibility = "visible";
@@ -82,21 +132,55 @@ function getInput2() {
   }, 3000)
   playerInput.push(data);
   localStorage.setItem("gameInput", JSON.stringify(playerInput));
+  var guide = localStorage.getItem("gameInput");
+  var show = JSON.parse(guide);
+  document.getElementById("listUp").innerHTML = show.join(', ');
+
   } else {
-    let score2 = document.getElementById("wrong")
+    let score2 = document.getElementById("wrong");
     score2.style.visibility = "visible";
     setTimeout(() => {
       score2.style.visibility = "hidden";
     }, 3000);
-    return;
+    playerWorngInput.push(data);
+    
+    localStorage.setItem("wrongInput", JSON.stringify(playerWorngInput));
+
+    var wrongShow = localStorage.getItem("wrongInput");
+    var nowShow = JSON.parse(wrongShow);
+    document.getElementById("listUp2").innerHTML = nowShow.join(', ');
+  }
+
+
+  // if(storeWrong.includes(data)) {
+  //   alert("You can't input" + " " + data + " " + "again");
+  //   return;
+  // } else {
+  //   playerWorngInput.push(data);
+      
+  //   localStorage.setItem("wrongInput", JSON.stringify(playerWorngInput));
+  //   return;
+  // }
+
+
+
   
-  }    
+
+// if(storedResult != null) {
+
+  
+   
+   
+
+//   console.log(show.join(', '));
+  
+   
+
+// }
+
+ }
 
 
-  let guide = localStorage.getItem("gameInput")
-  document.getElementById("listUp").innerHTML = guide;
-
-}
 
 
 

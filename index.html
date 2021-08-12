@@ -50,13 +50,18 @@
         <h1 id="user-name"></h1>
       </header>
 
-      <div class="who">
-        <img src="/images/guess.svg" alt="Guess the person" width="200px" />
+      <div class="who" id="guess">
+        <img src="/images/guess.svg" alt="Guess the person" width="150px" />
         <h2>Guess Who is this?</h2>
       </div>
+      <div class="record">
       <div class="list">
         <p id="listUp"></p>
       </div>
+      <div class="list2">
+        <p id="listUp2"></p>
+      </div>
+    </div>
 
       <div class="mark" id="marks">
         <img
@@ -69,9 +74,10 @@
       </div>
 
       <div class="answer">
-        <form>
-          <input type="text" name="answer" id="answerText" required />
-          <div class="submit">
+        <div class="form1">
+          <form class="engine-form">
+            <input type="text" name="answer" id="answerText" required />
+
             <input
               type="button"
               value="CHECK ANSWER"
@@ -79,9 +85,12 @@
               onclick="getInput2()"
               required
             />
-            <button type="button" onclick="clearData()">Clear</button>
+            <div class="reset">
+            <button type="submit" onclick="clearData()">Restart</button>
           </div>
-        </form>
+          </form>
+        </div>
+ 
       </div>
     </div>
 

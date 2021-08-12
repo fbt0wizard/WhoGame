@@ -69,6 +69,11 @@ body {
     margin-bottom: 3rem;
 }
 
+.engine-form {
+    display: inline-grid;
+}
+
+
 #checkButton {
     background: #fff;
     border: 2px solid blue;
@@ -76,6 +81,20 @@ body {
     cursor: pointer;
     font-size: 16px;
     margin-top: 2rem;
+}
+
+.reset button {
+    margin-top: 2rem;
+}
+
+#listUp {
+    color: green;
+    font-size: 14px;
+}
+
+#listUp2 {
+    color: red;
+    font-size: 14px;
 }
 
 @media only screen and (max-width: 740px) {
