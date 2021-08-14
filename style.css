@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300&display=swap');
 
 * {
   box-sizing: border-box;
@@ -7,7 +8,7 @@
 body {
   background: #fff;
   margin: 4rem 9rem 0 9rem;
-  font-family: "Lato", sans-serif;
+  font-family: 'Poppins', sans-serif;
   height: 100%;
   background-repeat: no-repeat;
   
@@ -30,11 +31,23 @@ body {
 }
 
 #subButton {
-  padding: 10px 17px;
-  font-size: 17px;
+  padding: 21px 83px;
+  font-size: 26px;
   background: #fff;
   border: 1px solid blue;
+  border-radius: 5px;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+  cursor: pointer;
+  color: blue;
 }
+
+#subButton:hover {
+  color: #fff;
+  background: blue;
+}
+
+
 
 .footer {
   text-align: center;
@@ -236,20 +249,45 @@ body {
 
 
 .instruct button, .start button {
-  padding: 15px 50px 15px 50px;
-  font-size: 23px;
-  border: 1px solid blue;
+  padding: 21px 83px;
+  font-size: 26px;
   background: #fff;
+  border: 1px solid blue;
+  border-radius: 5px;
   cursor: pointer;
+  color: blue;
+}
+
+.instruct button:hover {
+  color: #fff;
+  background: blue;
 }
 
 .start button {
-  padding-right: 66px;
-  padding-left: 66px;
+  padding: 21px 109px;
 }
 
 .start {
   margin-bottom: 7rem;
+}
+
+.play-now {
+  padding: 21px 83px;
+  font-size: 26px;
+  background: #fff;
+  border: 1px solid blue;
+  border-radius: 5px;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  cursor: pointer;
+  color: blue;
+  color: #fff;
+  background: blue;
+}
+
+.play-now:hover {
+  color: #fff;
+  background: blue;
 }
 
 
@@ -427,7 +465,11 @@ background: red;
     font-size: 18px;
   }
 
-  .start-now {
+  .start-now, .play-now, #subButton, .instruct button {
+    padding: 18px 29px;
+  }
+
+  .start button {
     padding: 18px 49px;
   }
 }
