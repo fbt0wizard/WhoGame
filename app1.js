@@ -1,5 +1,6 @@
 // const Biden = ("american", "white", "politician", "alive", "above50", "male", "west");
 
+
 function getInput() {
   var userInput = document.getElementById('userInput').value;
   sessionStorage.setItem("userEntry", userInput);
@@ -10,10 +11,39 @@ function getInput() {
   }
 
   let newData = sessionStorage.getItem('userEntry');
-  alert("Welcome" + " " + newData);
+  document.getElementById("playerName").innerHTML = newData;
   document.getElementById("user-name").innerHTML = ("Let's Play," + " " + newData);
 
   var home = document.getElementById("firstSection");
+  if (home.style.display === "block") {
+    home.style.display = "none";
+  } else {
+    home.style.display = "none";
+  }
+
+  var game = document.getElementById("welcomeScreen");
+  if (game.style.display === "none") {
+    game.style.display = "block";
+  } else {
+    game.style.display = "block";
+  }
+
+  var score = document.getElementById("marks");
+  score.style.visibility = "hidden";
+
+  document.getElementById("userInput").value = "";
+
+
+}
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+let randomNum = getRandomInt((2));
+
+
+function openGame() {
+  var home = document.getElementById("welcomeScreen");
   if (home.style.display === "block") {
     home.style.display = "none";
   } else {
@@ -25,15 +55,18 @@ function getInput() {
     game.style.display = "block";
   } else {
     game.style.display = "block";
+
+    document.getElementById("answerText").value = "";
+
+    console.log(randomNum);
   }
 
-  var score = document.getElementById("marks");
-  score.style.visibility = "hidden";
-
+  
 
 }
 
 function clearData() {
+  document.getElementById("answerText").value = "";
   sessionStorage.clear();
   location.reload();
 }
@@ -46,11 +79,31 @@ var playerWorngInput = JSON.parse(sessionStorage.getItem("wrongInput") || "[]");
 var myFunctionCalls = 0;
 
 
-function getInput2() {
-  const buhari = ["black", "nigerian", "current president", "nigeria", "politician", "alive", "african", "africa",
-    "above50", "male", "president", "leader", "head of state", "educated", "elected", "west africa",
-    "father", "married", "africa", "buhari", "muhammadu buhari"];
 
+
+
+
+function getInput2() {
+  
+  let first = ["black", "nigerian", "current president", "nigeria", "politician", "alive", "african", "africa",
+                "above50", "male", "president", "leader", "head of state", "educated", "elected", "west africa",
+                "father", "married", "africa","west african"];
+
+  let second = ["white", "president", "above50", "leader", "educated", "elected", "alive", "current president", 
+               "male", "america", "american", "usa", "united states", "united state of america", "father", "married"]
+  
+  console.log(randomNum);
+  
+  if (randomNum == 0) {
+    var character = first;
+  }
+
+  if(randomNum == 1) {
+    var character = second;
+  }
+
+ 
+  
 
   var fresh = document.getElementById('answerText').value;
   let data = fresh.toLowerCase();
@@ -73,19 +126,42 @@ function getInput2() {
 
   console.log(storeWrong);
 
-
-  if (data == "buhari" || data == "muhammadu buhari") {
-    // document.getElementById("guess").innerHTML = "<img src=\"images/buhari.jpg\" width=\"250px\">";
+// for Buhari
+if(randomNum == 0) {
+  if (data.includes("buhari") || data.includes("muhammadu buhari")) {
     let newData = sessionStorage.getItem('userEntry');
     document.getElementById("pName").innerHTML = newData;
     document.getElementById("characterImg").innerHTML = "<img src=\"images/buhari.jpg\" width=\"250px\">";
+    document.getElementById("aboutChar").innerHTML = ("Muhamemmed Buhari is the president of Nigeria")
 
-    var home = document.getElementById("firstSection");
+    var home = document.getElementById("gameSection");
     if (home.style.display === "block") {
       home.style.display = "none";
     } else {
       home.style.display = "none";
     }
+
+    var game = document.getElementById("winSection");
+    if (game.style.display === "none") {
+      game.style.display = "block";
+    } else {
+      game.style.display = "block";
+
+    }
+
+
+    return;
+  }
+}
+
+  //for Biden
+  if(randomNum == 1) {
+  
+    if (data.includes("biden") || data.includes("joe biden")) {
+    let newData = sessionStorage.getItem('userEntry');
+    document.getElementById("pName").innerHTML = newData;
+    document.getElementById("characterImg").innerHTML = "<img src=\"images/biden.jpg\" width=\"250px\">";
+    document.getElementById("aboutChar").innerHTML = ("Joe Biden is the president of USA")
 
     var game = document.getElementById("gameSection");
     if (game.style.display === "block") {
@@ -104,29 +180,29 @@ function getInput2() {
 
     return;
   }
+}
 
 
 
   if (storedResult != null) {
     if (storedResult.includes(data)) {
-      alert("You can't input" + " " + data + " " + "again");
+      document.getElementById("warning2").innerHTML = ("You can't input" + " " + data + " " + "again!!!");
+      document.getElementById("answerText").value = "";
       return;
     }
 
   }
 
-  let spit = buhari.includes(data);
+  let spit = character.includes(data);
 
   console.log(spit);
 
-  if (spit == false) {
     if (storeWrong != null) {
       if (storeWrong.includes(data)) {
         alert("You can't input" + " " + data + " " + "again");
         return;
       }
     }
-  }
 
   myFunctionCalls++;
 
@@ -135,12 +211,26 @@ function getInput2() {
   if (myFunctionCalls > 10) {
     let loss = sessionStorage.getItem('userEntry');
     alert("Hey" + " " + loss + " " + "sorry you lost");
+    var game = document.getElementById("gameSection");
+  if (game.style.display === "block") {
+    game.style.display = "none";
+  } else {
+    game.style.display = "none";
+  }
+
+  var game = document.getElementById("playerFail");
+  if (game.style.display === "none") {
+    game.style.display = "block";
+  } else {
+    game.style.display = "block";
+  }
+    return;
   } else {
     document.getElementById("counter").innerHTML = life;
   }
 
 
-  if (buhari.includes(data)) {
+  if (character.includes(data)) {
     let score = document.getElementById("correct");
     score.style.visibility = "visible";
     setTimeout(() => {
@@ -167,8 +257,11 @@ function getInput2() {
     document.getElementById("listUp2").innerHTML = nowShow.join(', ');
   }
 
-}
+  document.getElementById("answerText").value = "";
+ 
 
+
+}
 
 
 

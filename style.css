@@ -188,6 +188,42 @@ body {
   top: 0;
   opacity: 0;
 }
+
+.welcome-screen {
+  text-align: center;
+  display: none;
+  margin-top: 6rem;
+}
+
+.fail {
+  display: none;
+}
+
+.welcome-screen h2 {
+  color: blue;
+}
+
+.instruct, .start {
+  margin-top: 4rem;
+}
+
+
+.instruct button, .start button {
+  padding: 15px 50px 15px 50px;
+  font-size: 23px;
+  border: 1px solid blue;
+  background: #fff;
+  cursor: pointer;
+}
+
+.start button {
+  padding-right: 66px;
+  padding-left: 66px;
+}
+
+.start {
+  margin-bottom: 7rem;
+}
 .confetti-piece:nth-child(1) {
   left: 7%;
   -webkit-transform: rotate(-40deg);
