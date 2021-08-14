@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GUESS WHO?</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <div class="first-section" id="firstSection">
@@ -47,6 +53,7 @@
         </div>
       </div>
     </div>
+    <div class="welcome-screen" id="welcomeScreen"></div>
 
     <div class="game-section" id="gameSection">
       <header class="welcome-player">
@@ -54,17 +61,19 @@
       </header>
 
       <div class="who" id="guess">
-        <img src="/images/guess.svg" alt="Guess the person" width="150px" />
+        <img src="/images/guess.svg" alt="Guess the person"/>
         <h2>Guess Who is this?</h2>
       </div>
       <div class="reset-life">
-      <div class="reset">
-        <button type="button" onclick="clearData()">Restart</button>
+        <div class="reset">
+          <button type="button" onclick="clearData()">
+            Restart
+          </button>
+        </div>
+        <div class="life">
+          <p><span id="counter">0</span>/10</p>
+        </div>
       </div>
-      <div class="life">
-        <p><span id="counter">0</span>/10</p>
-      </div>
-    </div>
 
       <div class="mark" id="marks">
         <img
@@ -73,7 +82,7 @@
           alt="correct"
           width="90px"
         />
-        <img id="wrong" src="/images/wrong.png" alt="wrong" width="90px" />
+        <img id="wrong" src="/images/wrong.png" alt="wrong" />
       </div>
 
       <div class="answer">
@@ -82,7 +91,7 @@
             <div class="label">
               <label id="warning2" for="text"></label>
             </div>
-            <input type="text" name="answer" id="answerText" required />
+            <input type="text" name="answer" id="answerText" placeholder="input answer" required />
 
             <input
               type="button"
@@ -92,7 +101,7 @@
               required
             />
           </form>
-          <div class="record">
+          <div class="record" id="recordScore">
             <div class="list">
               <p id="listUp"></p>
             </div>
@@ -101,6 +110,76 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="win-section" id="winSection">
+      <div class="confetti">
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+      </div>
+      <div class="head-content">
+        <h2>Congratulations <span id="pName"></span>, <br />you are awesome</h2>
+      </div>
+      <div class="character-img" id="characterImg"></div>
+      <div class="about-char">
+        <p id="aboutChar">
+          Muhamemmed Buhari is the president of Nigeria<br />
+          from 2015 till date
+        </p>
+      </div>
+      <div class="trophy">
+        <img src="/images/trophy.png" alt="" width="120px" />
       </div>
     </div>
 

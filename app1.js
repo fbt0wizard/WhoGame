@@ -30,6 +30,7 @@ function getInput() {
   var score = document.getElementById("marks");
   score.style.visibility = "hidden";
 
+
 }
 
 function clearData() {
@@ -46,7 +47,7 @@ var myFunctionCalls = 0;
 
 
 function getInput2() {
-  const buhari = ["black", "nigerian", "nigeria", "politician", "alive", "african", "africa",
+  const buhari = ["black", "nigerian", "current president", "nigeria", "politician", "alive", "african", "africa",
     "above50", "male", "president", "leader", "head of state", "educated", "elected", "west africa",
     "father", "married", "africa", "buhari", "muhammadu buhari"];
 
@@ -74,9 +75,33 @@ function getInput2() {
 
 
   if (data == "buhari" || data == "muhammadu buhari") {
-    document.getElementById("guess").innerHTML = "<img src=\"images/buhari.jpg\" width=\"250px\">";
+    // document.getElementById("guess").innerHTML = "<img src=\"images/buhari.jpg\" width=\"250px\">";
     let newData = sessionStorage.getItem('userEntry');
-    alert("Great job" + " " + newData);
+    document.getElementById("pName").innerHTML = newData;
+    document.getElementById("characterImg").innerHTML = "<img src=\"images/buhari.jpg\" width=\"250px\">";
+
+    var home = document.getElementById("firstSection");
+    if (home.style.display === "block") {
+      home.style.display = "none";
+    } else {
+      home.style.display = "none";
+    }
+
+    var game = document.getElementById("gameSection");
+    if (game.style.display === "block") {
+      game.style.display = "none";
+    } else {
+      game.style.display = "none";
+    }
+    var game = document.getElementById("winSection");
+    if (game.style.display === "none") {
+      game.style.display = "block";
+    } else {
+      game.style.display = "block";
+
+    }
+
+
     return;
   }
 
