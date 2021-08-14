@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>GUESS WHO?</title>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -59,7 +59,9 @@
         <button class="how-to" id="howToPlay">How To Play</button>
       </div>
       <div class="start">
-        <button class="start-now" id="startNow" onclick="openGame()">Play Now</button>
+        <button class="start-now" id="startNow" onclick="openGame()">
+          Play Now
+        </button>
       </div>
     </div>
 
@@ -189,12 +191,20 @@
       <div class="trophy">
         <img src="/images/trophy.png" alt="" width="120px" />
       </div>
+      <div class="start">
+        <button class="start-now" id="startNow" onclick="clearData()">
+          Play Again
+        </button>
+      </div>
     </div>
 
     <div class="fail" id="playerFail">
-      <h2><span id="playerName"></span>, you got this and you shoud try again <br>read instructions if you have to</h2>
+      <h2>
+        <span id="lost"></span>, you got this and you shoud try again
+        <br />read instructions if you have to
+      </h2>
       <div class="try-again">
-        <button class="start-now" id="startNow">Try Again</button>
+        <button class="start-now" id="startNow" onclick="clearData()">Try Again</button>
       </div>
     </div>
 

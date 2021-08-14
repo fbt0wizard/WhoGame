@@ -8,6 +8,9 @@ body {
   background: #fff;
   margin: 4rem 9rem 0 9rem;
   font-family: "Lato", sans-serif;
+  height: 100%;
+  background-repeat: no-repeat;
+  
 }
 
 .welcome {
@@ -197,6 +200,30 @@ body {
 
 .fail {
   display: none;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.fail h2 {
+  color: blue;
+  margin-top: 8rem;
+}
+
+.start-now {
+  padding: 21px 83px;
+  font-size: 26px;
+  background: #fff;
+  border: 1px solid blue;
+  border-radius: 5px;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  cursor: pointer;
+  color: blue;
+}
+
+.start-now:hover {
+  color: #fff;
+  background: blue;
 }
 
 .welcome-screen h2 {
@@ -224,6 +251,8 @@ body {
 .start {
   margin-bottom: 7rem;
 }
+
+
 .confetti-piece:nth-child(1) {
   left: 7%;
   -webkit-transform: rotate(-40deg);
@@ -352,12 +381,20 @@ background: red;
     margin: -162px 12px 0 12px;
   }
 
-  .first-section, .game-section {
+  .label {
+    margin-top: 3rem;
+  }
+
+  .welcome-screen h2 {
+    font-size: 19px;
+  }
+
+  .first-section, .game-section, .welcome-screen, .win-section, .fail {
     border: 1rem solid rgba(0, 0, 255, 0.685);
     padding-top: 2rem;
     background: #ffffff;
-    border-bottom: none;
     margin-top: -32px;
+    height: 100%;
   }
 
   .who img {
@@ -377,11 +414,20 @@ background: red;
   }
 
   .footer {
-    border: 1rem solid rgba(0, 0, 255, 0.685);
-    border-top: none;
+    /* border: 1rem solid rgba(0, 0, 255, 0.685); */
+    background: #fff;
   }
 
   .welcome h2 {
     font-size: 15px;
+  }
+
+  .fail h2 {
+    margin-top: 1rem;
+    font-size: 18px;
+  }
+
+  .start-now {
+    padding: 18px 49px;
   }
 }

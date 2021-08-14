@@ -3,14 +3,14 @@
 
 function getInput() {
   var userInput = document.getElementById('userInput').value;
-  sessionStorage.setItem("userEntry", userInput);
+  localStorage.setItem("userEntry", userInput);
 
   if (userInput.length == 0) {
     document.getElementById("warning").innerHTML = "Please input your name!!!";
     return;
   }
 
-  let newData = sessionStorage.getItem('userEntry');
+  let newData = localStorage.getItem('userEntry');
   document.getElementById("playerName").innerHTML = newData;
   document.getElementById("user-name").innerHTML = ("Let's Play," + " " + newData);
 
@@ -59,11 +59,13 @@ function openGame() {
     document.getElementById("answerText").value = "";
 
     console.log(randomNum);
+
   }
 
   
 
 }
+
 
 function clearData() {
   document.getElementById("answerText").value = "";
@@ -129,7 +131,7 @@ function getInput2() {
 // for Buhari
 if(randomNum == 0) {
   if (data.includes("buhari") || data.includes("muhammadu buhari")) {
-    let newData = sessionStorage.getItem('userEntry');
+    let newData = localStorage.getItem('userEntry');
     document.getElementById("pName").innerHTML = newData;
     document.getElementById("characterImg").innerHTML = "<img src=\"images/buhari.jpg\" width=\"250px\">";
     document.getElementById("aboutChar").innerHTML = ("Muhamemmed Buhari is the president of Nigeria")
@@ -149,7 +151,6 @@ if(randomNum == 0) {
 
     }
 
-
     return;
   }
 }
@@ -158,7 +159,7 @@ if(randomNum == 0) {
   if(randomNum == 1) {
   
     if (data.includes("biden") || data.includes("joe biden")) {
-    let newData = sessionStorage.getItem('userEntry');
+    let newData = localStorage.getItem('userEntry');
     document.getElementById("pName").innerHTML = newData;
     document.getElementById("characterImg").innerHTML = "<img src=\"images/biden.jpg\" width=\"250px\">";
     document.getElementById("aboutChar").innerHTML = ("Joe Biden is the president of USA")
@@ -176,7 +177,6 @@ if(randomNum == 0) {
       game.style.display = "block";
 
     }
-
 
     return;
   }
@@ -199,7 +199,8 @@ if(randomNum == 0) {
 
     if (storeWrong != null) {
       if (storeWrong.includes(data)) {
-        alert("You can't input" + " " + data + " " + "again");
+        document.getElementById("warning2").innerHTML = ("You can't input" + " " + data + " " + "again!!!");
+        document.getElementById("answerText").value = "";
         return;
       }
     }
@@ -208,9 +209,11 @@ if(randomNum == 0) {
 
   let life = myFunctionCalls;
 
-  if (myFunctionCalls > 10) {
-    let loss = sessionStorage.getItem('userEntry');
-    alert("Hey" + " " + loss + " " + "sorry you lost");
+  if (myFunctionCalls > 3) {
+    let looser = localStorage.getItem('userEntry');
+    console.log(looser);
+    document.getElementById("lost").innerHTML = looser;
+    
     var game = document.getElementById("gameSection");
   if (game.style.display === "block") {
     game.style.display = "none";
@@ -223,7 +226,9 @@ if(randomNum == 0) {
     game.style.display = "block";
   } else {
     game.style.display = "block";
+
   }
+    
     return;
   } else {
     document.getElementById("counter").innerHTML = life;
