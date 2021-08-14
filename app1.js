@@ -91,7 +91,7 @@ function getInput2() {
                 "above50", "male", "president", "leader", "head of state", "educated", "elected", "west africa",
                 "father", "married", "africa","west african"];
 
-  let two = ["white", "president", "above50", "leader", "educated", "elected", "alive", "current president", 
+  let two = ["white", "president", "above50", "leader", "educated", "elected", "alive", "current president", "politician", 
                "male", "america", "american", "usa", "united states", "united state of america", "father", "married"]
 
   let three = ["male", "celebrity", "singer", "under50", "pop", "r and b", "r & b", "r&b", "canadian", "canada", "alive", "grammy",
