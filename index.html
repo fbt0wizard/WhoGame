@@ -14,6 +14,7 @@
     />
   </head>
   <body>
+   
     <div class="first-section" id="firstSection">
       <header class="welcome">
         <h1>GUESS WHO?</h1>
@@ -59,7 +60,7 @@
         <button class="how-to" id="howToPlay">How To Play</button>
       </div>
       <div class="start">
-        <button class="start-now" id="startNow" onclick="openGame()">
+        <button class="start-now" id="startFire" onclick="openGame()">
           Play Now
         </button>
       </div>
@@ -127,60 +128,7 @@
     </div>
 
     <div class="win-section" id="winSection">
-      <div class="confetti">
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-      </div>
+
       <div class="head-content">
         <h2>Congratulations <span id="pName"></span>, <br />you are awesome</h2>
       </div>
@@ -191,11 +139,13 @@
       <div class="trophy">
         <img src="/images/trophy.png" alt="" width="120px" />
       </div>
-      <div class="start">
-        <button class="play-again" id="startNow" onclick="clearData()">
+      <div class="start2">
+        <button class="play-again" id="startNow" onclick="clearData()" >
           Play Again
         </button>
       </div>
+
+      
     </div>
 
     <div class="fail" id="playerFail">
@@ -204,7 +154,7 @@
         <br />read instructions if you have to
       </h2>
       <div class="try-again">
-        <button class="start-now" id="startNow" onclick="clearData()">Try Again</button>
+        <button class="start-now" id="startButton" onclick="clearData()">Try Again</button>
       </div>
     </div>
 

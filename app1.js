@@ -66,6 +66,12 @@ function openGame() {
 
 }
 
+function startAgain() {
+  document.getElementById("answerText").value = "";
+  sessionStorage.clear();
+  location.reload();
+}
+
 
 function clearData() {
   document.getElementById("answerText").value = "";
@@ -157,6 +163,14 @@ if(randomNum == 0) {
 
     }
 
+    var game = document.getElementById("celeb");
+    if (game.style.display === "none") {
+      game.style.display = "block";
+    } else {
+      game.style.display = "block";
+
+    }
+
     return;
   }
 }
@@ -177,6 +191,13 @@ if(randomNum == 0) {
       game.style.display = "none";
     }
     var game = document.getElementById("winSection");
+    if (game.style.display === "none") {
+      game.style.display = "block";
+    } else {
+      game.style.display = "block";
+
+    }
+    var game = document.getElementById("celeb");
     if (game.style.display === "none") {
       game.style.display = "block";
     } else {
@@ -210,9 +231,16 @@ if(randomNum == 0) {
     game.style.display = "block";
 
   }
+      var game = document.getElementById("celeb");
+    if (game.style.display === "none") {
+      game.style.display = "block";
+    } else {
+      game.style.display = "block";
 
-  return;
-}
+    }
+
+    return;
+  }
 }
 
 
