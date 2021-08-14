@@ -289,7 +289,7 @@ body {
   .first-section, .game-section, .welcome-screen, .win-section, .fail {
     border: 1rem solid rgba(0, 0, 255, 0.685);
     padding-top: 2rem;
-    background: #ffffff;
+    background:hsl(70, 31%, 85%);
     margin-top: -32px;
     height: 100%;
   }
