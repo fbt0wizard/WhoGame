@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
     <title>GUESS WHO?</title>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -14,7 +17,6 @@
     />
   </head>
   <body>
-   
     <div class="first-section" id="firstSection">
       <header class="welcome">
         <h1>GUESS WHO?</h1>
@@ -27,7 +29,7 @@
       <div class="body">
         <h2 id="heading">Please Input Your Name.</h2>
         <div class="user-record">
-          <form name="myform">
+          <form onSubmit="return false;">
             <div class="label">
               <label id="warning" for="text"></label>
             </div>
@@ -96,7 +98,7 @@
 
       <div class="answer">
         <div class="form1">
-          <form class="engine-form">
+          <form onSubmit="return false;">
             <div class="label">
               <label id="warning2" for="text"></label>
             </div>
@@ -107,13 +109,11 @@
               placeholder="input answer"
               required
             />
-
-            <input
-              type="button"
-              value="CHECK ANSWER"
-              id="checkButton"
-              onclick="getInput2()"
-            />
+            <div>
+              <button type="button" id="checkButton" onclick="getInput2()">
+                CHECK ANSWER
+              </button>
+            </div>
           </form>
           <div class="record" id="recordScore">
             <div class="list">
@@ -128,7 +128,6 @@
     </div>
 
     <div class="win-section" id="winSection">
-
       <div class="head-content">
         <h2>Congratulations <span id="pName"></span>, <br />you are awesome</h2>
       </div>
@@ -140,21 +139,21 @@
         <img src="/images/trophy.png" alt="" width="120px" />
       </div>
       <div class="start2">
-        <button class="play-again" id="startNow" onclick="clearData()" >
+        <button class="play-again" id="startNow" onclick="clearData()">
           Play Again
         </button>
       </div>
-
-      
     </div>
 
     <div class="fail" id="playerFail">
       <h2>
-        <span id="lost"></span>, you got this and you shoud try again
-        <br />read instructions if you have to
+        <span id="lost"></span>, you got this and you shoud try again <br />read
+        instructions if you have to
       </h2>
       <div class="try-again">
-        <button class="start-now" id="startButton" onclick="clearData()">Try Again</button>
+        <button class="start-now" id="startButton" onclick="clearData()">
+          Try Again
+        </button>
       </div>
     </div>
 
