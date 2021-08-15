@@ -35,12 +35,6 @@ function getInput() {
 
 
 }
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
-
-let randomNum = getRandomInt((3));
-
 
 function openGame() {
   var top = sessionStorage.getItem("gameInput");
@@ -103,35 +97,46 @@ var myFunctionCalls = 0;
 
 
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+let randomNum = getRandomInt((4));
+
 
 
 
 function getInput2() {
 
-  let one = ["black", "nigerian", "current president", "nigeria", "politician", "alive", "african", "africa",
+  let buhar = ["black", "nigerian", "current president", "nigeria", "politician", "alive", "african", "africa",
     "above50", "male", "president", "leader", "head of state", "educated", "elected", "west africa",
     "father", "married", "africa", "west african"];
 
-  let two = ["white", "president", "above50", "leader", "educated", "elected", "alive", "current president", "politician",
+  let joeBiden = ["white", "president", "above50", "leader", "educated", "elected", "alive", "current president", "politician",
     "male", "america", "american", "usa", "united states", "united state of america", "father", "married"]
 
-  let three = ["male", "celebrity", "singer", "under50", "pop", "r and b", "r & b", "r&b", "canadian", "canada", "alive", "grammy",
-    "singer", "songwriter", "song writer", "educated", "lives in america", "lives in usa", "musician", "wealthy", "rich",]
+  let justinBieber = ["male", "celebrity", "singer", "beauty and a beat", "under50", "pop", "r and b", "r & b", "r&b", "canadian", "canada", "alive", "grammy",
+    "singer", "songwriter", "song writer", "educated", "lives in america", "lives in usa", "musician", "wealthy", "rich", "sorry", "Baby", "Boyfriend", "i'm the one", "no brainer", "Intentions"]
 
+  let rihana = ["female", "barbados", "lives in america", "black", "grammy", "singer", "celebrity", "below50", "barbadian", "pop",
+     "r&b", "r and b", "reggae", "umbrella", "take a bow", "love the way you lie", "wild thoughts", "diamond", "diamonds", "whats my name", "we found love", "alive", "musician"]
   console.log(randomNum);
 
   if (randomNum == 0) {
-    var character = one;
+    var character = buhar;
   }
 
   if (randomNum == 1) {
-    var character = two;
+    var character = joeBiden;
   }
 
   if (randomNum == 2) {
-    var character = three;
+    var character = justinBieber;
   }
 
+  if (randomNum == 3) {
+    var character = rihana;
+  }
 
 
   var fresh = document.getElementById('answerText').value;
@@ -234,13 +239,32 @@ function getInput2() {
         game.style.display = "block";
 
       }
-      var game = document.getElementById("celeb");
+
+      return;
+    }
+  }
+
+  if (randomNum == 3) {
+    if (data.includes("rihanna")) {
+      let newData = localStorage.getItem('userEntry');
+      document.getElementById("pName").innerHTML = newData;
+      document.getElementById("characterImg").innerHTML = "<img src=\"images/rihana.jpg\" width=\"250px\">";
+      document.getElementById("aboutChar").innerHTML = ("")
+
+      var game = document.getElementById("gameSection");
+      if (game.style.display === "block") {
+        game.style.display = "none";
+      } else {
+        game.style.display = "none";
+      }
+      var game = document.getElementById("winSection");
       if (game.style.display === "none") {
         game.style.display = "block";
       } else {
         game.style.display = "block";
 
       }
+
 
       return;
     }
