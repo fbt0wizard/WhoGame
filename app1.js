@@ -43,26 +43,41 @@ let randomNum = getRandomInt((3));
 
 
 function openGame() {
-  var home = document.getElementById("welcomeScreen");
-  if (home.style.display === "block") {
-    home.style.display = "none";
+  var top = sessionStorage.getItem("gameInput");
+  var down = sessionStorage.getItem("wrongInput");
+
+  console.log();
+  if (down === null) {
+    if (top === null) {
+      var home = document.getElementById("welcomeScreen");
+      if (home.style.display === "block") {
+        home.style.display = "none";
+      } else {
+        home.style.display = "none";
+      }
+
+      var game = document.getElementById("gameSection");
+      if (game.style.display === "none") {
+        game.style.display = "block";
+      } else {
+        game.style.display = "block";
+
+        document.getElementById("answerText").value = "";
+
+        console.log(randomNum);
+      }
+    } else {
+      sessionStorage.clear();
+      location.reload();
+      return;
+    }
   } else {
-    home.style.display = "none";
+    sessionStorage.clear();
+    location.reload();
+    return;
   }
 
-  var game = document.getElementById("gameSection");
-  if (game.style.display === "none") {
-    game.style.display = "block";
-  } else {
-    game.style.display = "block";
 
-    document.getElementById("answerText").value = "";
-
-    console.log(randomNum);
-
-  }
-
-  
 
 }
 
@@ -92,32 +107,32 @@ var myFunctionCalls = 0;
 
 
 function getInput2() {
-  
-  let one = ["black", "nigerian", "current president", "nigeria", "politician", "alive", "african", "africa",
-                "above50", "male", "president", "leader", "head of state", "educated", "elected", "west africa",
-                "father", "married", "africa","west african"];
 
-  let two = ["white", "president", "above50", "leader", "educated", "elected", "alive", "current president", "politician", 
-               "male", "america", "american", "usa", "united states", "united state of america", "father", "married"]
+  let one = ["black", "nigerian", "current president", "nigeria", "politician", "alive", "african", "africa",
+    "above50", "male", "president", "leader", "head of state", "educated", "elected", "west africa",
+    "father", "married", "africa", "west african"];
+
+  let two = ["white", "president", "above50", "leader", "educated", "elected", "alive", "current president", "politician",
+    "male", "america", "american", "usa", "united states", "united state of america", "father", "married"]
 
   let three = ["male", "celebrity", "singer", "under50", "pop", "r and b", "r & b", "r&b", "canadian", "canada", "alive", "grammy",
-              "singer", "songwriter", "song writer", "educated", "lives in america", "lives in usa", "musician", "wealthy", "rich",]
-  
+    "singer", "songwriter", "song writer", "educated", "lives in america", "lives in usa", "musician", "wealthy", "rich",]
+
   console.log(randomNum);
-  
+
   if (randomNum == 0) {
     var character = one;
   }
 
-  if(randomNum == 1) {
+  if (randomNum == 1) {
     var character = two;
   }
 
-  if(randomNum == 2) {
+  if (randomNum == 2) {
     var character = three;
   }
- 
-  
+
+
 
   var fresh = document.getElementById('answerText').value;
   let data = fresh.toLowerCase();
@@ -140,108 +155,96 @@ function getInput2() {
 
   console.log(storeWrong);
 
-// for Buhari
-if(randomNum == 0) {
-  if (data.includes("buhari") || data.includes("muhammadu buhari")) {
-    let newData = localStorage.getItem('userEntry');
-    document.getElementById("pName").innerHTML = newData;
-    document.getElementById("characterImg").innerHTML = "<img src=\"images/buhari.jpg\" width=\"250px\">";
-    document.getElementById("aboutChar").innerHTML = ("Muhamemmed Buhari is the president of Nigeria")
+  // for Buhari
+  if (randomNum == 0) {
+    if (data.includes("buhari") || data.includes("muhammadu buhari")) {
+      let newData = localStorage.getItem('userEntry');
+      document.getElementById("pName").innerHTML = newData;
+      document.getElementById("characterImg").innerHTML = "<img src=\"images/buhari.jpg\" width=\"250px\">";
+      document.getElementById("aboutChar").innerHTML = ("Muhamemmed Buhari is the president of Nigeria")
 
-    var home = document.getElementById("gameSection");
-    if (home.style.display === "block") {
-      home.style.display = "none";
-    } else {
-      home.style.display = "none";
+      var home = document.getElementById("gameSection");
+      if (home.style.display === "block") {
+        home.style.display = "none";
+      } else {
+        home.style.display = "none";
+      }
+
+      var game = document.getElementById("winSection");
+      if (game.style.display === "none") {
+        game.style.display = "block";
+      } else {
+        game.style.display = "block";
+
+      }
+
+
+
+      return;
     }
-
-    var game = document.getElementById("winSection");
-    if (game.style.display === "none") {
-      game.style.display = "block";
-    } else {
-      game.style.display = "block";
-
-    }
-
-    var game = document.getElementById("celeb");
-    if (game.style.display === "none") {
-      game.style.display = "block";
-    } else {
-      game.style.display = "block";
-
-    }
-
-    return;
   }
-}
 
   //for Biden
-  if(randomNum == 1) {
-  
+  if (randomNum == 1) {
+
     if (data.includes("biden") || data.includes("joe biden")) {
-    let newData = localStorage.getItem('userEntry');
-    document.getElementById("pName").innerHTML = newData;
-    document.getElementById("characterImg").innerHTML = "<img src=\"images/biden.jpg\" width=\"250px\">";
-    document.getElementById("aboutChar").innerHTML = ("Joe Biden is the president of USA")
+      let newData = localStorage.getItem('userEntry');
+      document.getElementById("pName").innerHTML = newData;
+      document.getElementById("characterImg").innerHTML = "<img src=\"images/biden.jpg\" width=\"250px\">";
+      document.getElementById("aboutChar").innerHTML = ("Joe Biden is the president of USA")
 
-    var game = document.getElementById("gameSection");
-    if (game.style.display === "block") {
-      game.style.display = "none";
-    } else {
-      game.style.display = "none";
+      var game = document.getElementById("gameSection");
+      if (game.style.display === "block") {
+        game.style.display = "none";
+      } else {
+        game.style.display = "none";
+      }
+      var game = document.getElementById("winSection");
+      if (game.style.display === "none") {
+        game.style.display = "block";
+      } else {
+        game.style.display = "block";
+
+      }
+
+
+      return;
     }
-    var game = document.getElementById("winSection");
-    if (game.style.display === "none") {
-      game.style.display = "block";
-    } else {
-      game.style.display = "block";
-
-    }
-    var game = document.getElementById("celeb");
-    if (game.style.display === "none") {
-      game.style.display = "block";
-    } else {
-      game.style.display = "block";
-
-    }
-
-    return;
   }
-}
 
- //for Justin bieber
- if(randomNum == 2) {
-  
-  if (data.includes("justin") || data.includes("bieber")) {
-  let newData = localStorage.getItem('userEntry');
-  document.getElementById("pName").innerHTML = newData;
-  document.getElementById("characterImg").innerHTML = "<img src=\"images/justin.jpg\" width=\"250px\">";
-  document.getElementById("aboutChar").innerHTML = ("Justin Bieber is a canadian born song writer")
+  //for Justin bieber
+  if (randomNum == 2) {
 
-  var game = document.getElementById("gameSection");
-  if (game.style.display === "block") {
-    game.style.display = "none";
-  } else {
-    game.style.display = "none";
-  }
-  var game = document.getElementById("winSection");
-  if (game.style.display === "none") {
-    game.style.display = "block";
-  } else {
-    game.style.display = "block";
+    if (data.includes("justin") || data.includes("bieber")) {
+      let newData = localStorage.getItem('userEntry');
+      document.getElementById("pName").innerHTML = newData;
+      document.getElementById("characterImg").innerHTML = "<img src=\"images/justin.jpg\" width=\"250px\">";
+      document.getElementById("aboutChar").innerHTML = ("Justin Bieber is a canadian born song writer")
 
-  }
+      var game = document.getElementById("gameSection");
+      if (game.style.display === "block") {
+        game.style.display = "none";
+      } else {
+        game.style.display = "none";
+      }
+      var game = document.getElementById("winSection");
+      if (game.style.display === "none") {
+        game.style.display = "block";
+      } else {
+        game.style.display = "block";
+
+      }
       var game = document.getElementById("celeb");
-    if (game.style.display === "none") {
-      game.style.display = "block";
-    } else {
-      game.style.display = "block";
+      if (game.style.display === "none") {
+        game.style.display = "block";
+      } else {
+        game.style.display = "block";
 
+      }
+
+      return;
     }
-
-    return;
   }
-}
 
 
 
@@ -259,13 +262,13 @@ if(randomNum == 0) {
 
   console.log(spit);
 
-    if (storeWrong != null) {
-      if (storeWrong.includes(data)) {
-        document.getElementById("warning2").innerHTML = ("You can't input" + " " + data + " " + "again!!!");
-        document.getElementById("answerText").value = "";
-        return;
-      }
+  if (storeWrong != null) {
+    if (storeWrong.includes(data)) {
+      document.getElementById("warning2").innerHTML = ("You can't input" + " " + data + " " + "again!!!");
+      document.getElementById("answerText").value = "";
+      return;
     }
+  }
 
   myFunctionCalls++;
 
@@ -275,22 +278,22 @@ if(randomNum == 0) {
     let looser = localStorage.getItem('userEntry');
     console.log(looser);
     document.getElementById("lost").innerHTML = looser;
-    
+
     var game = document.getElementById("gameSection");
-  if (game.style.display === "block") {
-    game.style.display = "none";
-  } else {
-    game.style.display = "none";
-  }
+    if (game.style.display === "block") {
+      game.style.display = "none";
+    } else {
+      game.style.display = "none";
+    }
 
-  var game = document.getElementById("playerFail");
-  if (game.style.display === "none") {
-    game.style.display = "block";
-  } else {
-    game.style.display = "block";
+    var game = document.getElementById("playerFail");
+    if (game.style.display === "none") {
+      game.style.display = "block";
+    } else {
+      game.style.display = "block";
 
-  }
-    
+    }
+
     return;
   } else {
     document.getElementById("counter").innerHTML = life;
@@ -325,7 +328,7 @@ if(randomNum == 0) {
   }
 
   document.getElementById("answerText").value = "";
- 
+
 
 
 }
