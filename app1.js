@@ -135,7 +135,7 @@ function getInput2() {
   let joeBiden = ["white", "president", "above50", "leader", "educated", "elected", "alive", "current president", "politician",
     "male", "america", "american", "usa", "united states", "united state of america", "father", "married"]
 
-  let justinBieber = ["male", "celebrity", "singer", "beauty and a beat", "under50", "pop", "r and b", "r & b", "r&b", "canadian", "canada", "alive", "grammy",
+  let justinBieber = ["male", "celebrity", "singer", "beauty and a beat", "below50", "pop", "r and b", "r & b", "r&b", "canadian", "canada", "alive", "grammy",
     "singer", "songwriter", "song writer", "educated", "lives in america", "lives in usa", "musician", "wealthy", "rich", "sorry", "Baby", "Boyfriend", "i'm the one", "no brainer", "Intentions"]
 
   let rihana = ["female", "barbados", "lives in america", "black", "grammy", "singer", "celebrity", "below50", "barbadian", "pop",
