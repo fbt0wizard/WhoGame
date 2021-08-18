@@ -17,7 +17,6 @@
     />
   </head>
   <body>
-    
     <div class="first-section" id="firstSection">
       <header class="welcome">
         <h1>GUESS WHO?</h1>
@@ -62,46 +61,66 @@
       <div class="instruct">
         <button class="how-to" id="myBtn">How To Play</button>
         <div id="myModal" class="modal">
-
           <!-- Modal content -->
           <div class="modal-content">
             <span class="close">&times;</span>
             <p class="head">How To Play The GUESS WHO Game..</p>
-            <p class="subtext">This a game that require a lot of thinking, there is a very porpular(well known all over the world)
-              person behind the unknown picture, all you have to do is to narrow down your questions(15) to guide you in 
-              guessing the name of the person behind the unknown picture, i have written the program to respond to your input either it's correct or not
-              base on a local database file, read carefully the list below on how to ask the program questions. 
+            <p class="subtext">
+              This a game that require a lot of thinking, there is a very
+              porpular(well known all over the world) person behind the unknown
+              picture, all you have to do is to narrow down your questions(15)
+              to guide you in guessing the name of the person behind the unknown
+              picture, i have written the program to respond to your input
+              either it's correct or not base on a local database file, read
+              carefully the list below on how to ask the program questions.
             </p>
             <ul class="guide">
-              <li>You should ask the program a question by inputing, let's say "male" (without the quote) if it comes out correct 
-                then you know the person is male, you can also input "female"(without the quotes) either right or wrong it will be recorded (red for wrong and green for correct)
-                then you proceed.
+              <li>
+                You should ask the program a question by inputing, let's say
+                "male" (without the quote) if it comes out correct then you know
+                the person is male, you can also input "female"(without the
+                quotes) either right or wrong it will be recorded (red for wrong
+                and green for correct) then you proceed.
               </li>
               <li>
-                Another way you can narrow your options is by asking for the unknown persons proffession, you can input, let's say "politician"(without the quote)
-                you can also input celebrity, comedian, philanthropist, musician etc... you can click help to see the list of possible 
-                input you can ask the program.
+                Another way you can narrow your options is by asking for the
+                unknown persons proffession, you can input, let's say
+                "politician"(without the quote) you can also input celebrity,
+                comedian, philanthropist, musician etc... you can click help to
+                see the list of possible input you can ask the program.
               </li>
               <li>
-                After knowing the proffession, you can aslo ask for the country or the nationality of the unknown person, you can narrow it down by asking "west africa" or 
-                by just asking "american".
+                After knowing the proffession, you can aslo ask for the country
+                or the nationality of the unknown person, you can narrow it down
+                by asking "west africa" or by just asking "american".
               </li>
-                  <li>
-                    You can also ask if dead or alive by inputing "dead" or "alive".... if you end up with a musician you can input the title of their famours tracks Example "God's plan" for Drake and so on 
-                     you can also ask if the person is above 50 or below 50 by inputing "above50" or "below50" .... you can also ask if the person (if he/she is a musician) has won grammy award by 
-                     inputing "grammy" you can also ask if the person lives in a country by inputing "lives in France".
-                  </li>
-                  <li>
-                    When you finally think you know the person, you can input the persons name to check if you are correct.... 
-      
-                  </li>
+              <li>
+                You can also ask if dead or alive by inputing "dead" or
+                "alive".... if you end up with a musician you can input the
+                title of their famours tracks Example "God's plan" for Drake and
+                so on you can also ask if the person is above 50 or below 50 by
+                inputing "above50" or "below50" .... you can also ask if the
+                person (if he/she is a musician) has won grammy award by
+                inputing "grammy" you can also ask if the person lives in a
+                country by inputing "lives in France".
+              </li>
+              <li>
+                When you finally think you know the person, you can input the
+                persons name to check if you are correct....
+              </li>
             </ul>
-            <p class="head">I hope you find this game interesting, Thank you for playing</p>
+            <p class="head">
+              I hope you find this game interesting, Thank you for playing
+            </p>
           </div>
-        
         </div>
       </div>
       <div class="start">
+        <div class="warning-label">
+          <label class="warn-reset" for="warning"
+            >If you have unfinished game, you have to restart!!!</label
+          >
+        </div>
         <button class="start-now" id="startFire" onclick="openGame()">
           Play Now
         </button>
@@ -112,6 +131,35 @@
       <header class="welcome-player">
         <h1 id="user-name"></h1>
       </header>
+      <div class="help">
+        <button id="myBtn2"><i class="fa fa-question-circle" aria-hidden="true"></i></button>
+        <div id="myModal2" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close2">&times;</span>
+            <input
+              type="text"
+              id="myInput"
+              onkeyup="myFunction()"
+              placeholder= "Search for inputs.."
+            />
+            <div class="help-list">
+
+            <ul id="myUL">
+              <li><a href="#"></a>Alive</a></li>
+              <li><a href="#">Dead</a></li>
+
+              <li><a href="#">Above50</a></li>
+              <li><a href="#">Below50</a></li>
+
+              <li><a href="#">Male</a></li>
+              <li><a href="#">Female</a></li>
+              <li><a href="#">Celebrity</a></li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </div>
 
       <div class="who" id="guess">
         <img src="/images/guess.svg" alt="Guess the person" />
@@ -139,7 +187,7 @@
       <div class="answer">
         <div class="form1">
           <form onSubmit="return false;">
-            <div class="label">
+            <div class="label2">
               <label id="warning2" for="text"></label>
             </div>
             <input
@@ -197,12 +245,11 @@
       </div>
     </div>
 
-     
-
     <footer class="footer">
       <h3>This is a javascrypt project by<br />Oladipo Mustapha</h3>
     </footer>
 
     <script src="app1.js"></script>
+    <script src="modal.js"></script>
   </body>
 </html>

@@ -162,13 +162,21 @@ margin-top: 2rem;
   color: red;
   font-size: 14px;
 }
-.label {
-  margin-bottom: -1.8rem;
+
+.warn-reset {
+  font-size: 10px;
+  color: red;
 }
 
 .label label {
     color: red;
     font-size: 13px;
+}
+
+.label2 {
+  margin-bottom: 0.2rem;
+  color: red;
+  font-size: 13px;
 }
 
 .reset-life {
@@ -225,7 +233,7 @@ margin-top: 2rem;
   background: #fff;
   border: 1px solid blue;
   border-radius: 5px;
-  margin-top: 4rem;
+  margin-top: 0rem;
   margin-bottom: 6rem;
   cursor: pointer;
   color: blue;
@@ -242,6 +250,7 @@ margin-top: 2rem;
 
 .instruct, .start {
   margin-top: 4rem;
+  margin-bottom: 2rem;
 }
 
 
@@ -319,6 +328,7 @@ margin-top: 2rem;
 
   #user-name {
     font-size: 20px;
+    margin-top: -1rem;
   }
 
   .mark img {
@@ -391,10 +401,26 @@ margin-top: 2rem;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close2 {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close2:hover,
+.close2:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
@@ -416,5 +442,46 @@ margin-top: 2rem;
   font-weight: bold;
 }
 
+/* help modal */
+.help {
+  text-align: end;
+}
+
+#myInput {
+  /* background-image: url('images/search.svg'); */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+.help-list {
+  text-align: center;
+}
 
 
