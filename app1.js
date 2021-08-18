@@ -115,10 +115,10 @@ function getInput2() {
     "singer", "songwriter", "song writer", "educated", "lives in america", "lives in usa", "musician", "wealthy", "rich", "sorry", "Baby", "Boyfriend", "i'm the one", "no brainer", "Intentions"]
 
   let rihana = ["female", "barbados", "lives in america", "black", "grammy", "singer", "celebrity", "below50", "barbadian", "pop",
-     "r&b", "r and b", "reggae", "umbrella", "take a bow", "love the way you lie", "wild thoughts", "diamond", "diamonds", "whats my name", "we found love", "alive", "musician"]
-  
+    "r&b", "r and b", "reggae", "umbrella", "take a bow", "love the way you lie", "wild thoughts", "diamond", "diamonds", "whats my name", "we found love", "alive", "musician"]
+
   let michealJ = ["dead", "black", "musician", "singer", "lives in america", "male", "celebrity", "pop", "american", "america", "dancer", "father", "soul", "rock", "disco", "blues",
-        "grammy", "beat it", "rock with you"]
+    "grammy", "beat it", "rock with you"]
 
   if (randomNum == 0) {
     var character = buhar;
@@ -163,7 +163,7 @@ function getInput2() {
   console.log(storeWrong);
 
   // for Buhari
-if (randomNum == 0) {
+  if (randomNum == 0) {
     if (data.includes("buhari") || data.includes("muhammadu buhari")) {
       let newData = localStorage.getItem('userEntry');
       document.getElementById("pName").innerHTML = newData;
@@ -192,7 +192,7 @@ if (randomNum == 0) {
   }
 
   //for Biden
-if (randomNum == 1) {
+  if (randomNum == 1) {
 
     if (data.includes("biden") || data.includes("joe biden")) {
       let newData = localStorage.getItem('userEntry');
@@ -220,7 +220,7 @@ if (randomNum == 1) {
   }
 
   //for Justin bieber
-if (randomNum == 2) {
+  if (randomNum == 2) {
 
     if (data.includes("justin") || data.includes("bieber")) {
       let newData = localStorage.getItem('userEntry');
@@ -246,7 +246,7 @@ if (randomNum == 2) {
     }
   }
   // Rihanna
-if (randomNum == 3) {
+  if (randomNum == 3) {
     if (data.includes("rihanna")) {
       let newData = localStorage.getItem('userEntry');
       document.getElementById("pName").innerHTML = newData;
@@ -272,32 +272,32 @@ if (randomNum == 3) {
     }
   }
 
-    // Micheal jackson
-if (randomNum == 4) {
-  if (data.includes("micheal jackson")) {
-    let newData = localStorage.getItem('userEntry');
-    document.getElementById("pName").innerHTML = newData;
-    document.getElementById("characterImg").innerHTML = "<img src=\"images/micheal.jpg\" width=\"250px\">";
-    document.getElementById("aboutChar").innerHTML = ("Micheal Joseph Jackson is an American pop singer and dancer")
+  // Micheal jackson
+  if (randomNum == 4) {
+    if (data.includes("micheal jackson")) {
+      let newData = localStorage.getItem('userEntry');
+      document.getElementById("pName").innerHTML = newData;
+      document.getElementById("characterImg").innerHTML = "<img src=\"images/micheal.jpg\" width=\"250px\">";
+      document.getElementById("aboutChar").innerHTML = ("Micheal Joseph Jackson is an American pop singer and dancer")
 
-    var game = document.getElementById("gameSection");
-    if (game.style.display === "block") {
-      game.style.display = "none";
-    } else {
-      game.style.display = "none";
+      var game = document.getElementById("gameSection");
+      if (game.style.display === "block") {
+        game.style.display = "none";
+      } else {
+        game.style.display = "none";
+      }
+      var game = document.getElementById("winSection");
+      if (game.style.display === "none") {
+        game.style.display = "block";
+      } else {
+        game.style.display = "block";
+
+      }
+
+
+      return;
     }
-    var game = document.getElementById("winSection");
-    if (game.style.display === "none") {
-      game.style.display = "block";
-    } else {
-      game.style.display = "block";
-
-    }
-
-
-    return;
   }
-}
 
 
 
@@ -327,7 +327,7 @@ if (randomNum == 4) {
 
   let life = myFunctionCalls;
 
-if (myFunctionCalls > 15) {
+  if (myFunctionCalls > 15) {
     let looser = localStorage.getItem('userEntry');
     console.log(looser);
     document.getElementById("lost").innerHTML = looser;
@@ -353,7 +353,7 @@ if (myFunctionCalls > 15) {
   }
 
 
-if (character.includes(data)) {
+  if (character.includes(data)) {
     let score = document.getElementById("correct");
     score.style.visibility = "visible";
     setTimeout(() => {
@@ -361,7 +361,7 @@ if (character.includes(data)) {
     }, 3000)
     let newData = data.toString()
     console.log(newData);
-  
+
     playerInput.push(newData);
     sessionStorage.setItem("gameInput", JSON.stringify(playerInput));
     var guide = sessionStorage.getItem("gameInput");
