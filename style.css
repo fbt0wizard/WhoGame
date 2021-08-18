@@ -295,6 +295,10 @@ margin-top: 2rem;
   body {
     margin: 2rem 0 0 0;
   }
+
+  #myBtn2 {
+    margin-right: 1rem;
+  }
 }
 
 @media only screen and (max-width: 464px) {
@@ -482,6 +486,21 @@ margin-top: 2rem;
 
 .help-list {
   text-align: center;
+}
+
+#myBtn2 {
+  padding: 15px;
+  border-radius: 50%;
+  border: 1px solid blue;
+  color: blue;
+  background: #fff;
+  cursor: pointer;
+  font-size: 23px;
+}
+
+#myBtn2:hover {
+  background: blue;
+  color: #fff;
 }
 
 
