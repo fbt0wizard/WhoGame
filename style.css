@@ -5,24 +5,33 @@
   box-sizing: border-box;
 }
 
-/* @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-  html {
-    transform: rotate(-90deg);
-    transform-origin: left top;
-    width: 100vh;
-    overflow-x: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
-} */
-
 body {
   background: hsl(70, 31%, 85%);
   margin: 4rem 9rem 0 9rem;
   font-family: "Poppins", sans-serif;
   height: 100%;
   background-repeat: no-repeat;
+}
+
+/* how to play modal */
+
+.subtext {
+  font-size: 18px;
+}
+
+.guide {
+  text-align: start;
+  font-size: 16px;
+  color: blue;
+}
+
+.guide li {
+  margin-bottom: 2rem;
+}
+
+.head {
+  font-weight: bold;
+  font-size: 21px;
 }
 
 .welcome {
@@ -209,6 +218,15 @@ p {
   margin-top: 6rem;
 }
 
+.suggestion {
+  text-align: center;
+  display: none;
+}
+
+.suggestion h2 {
+  color: blue;
+}
+
 .fail {
   display: none;
   text-align: center;
@@ -281,6 +299,36 @@ p {
   margin: 0;
 }
 
+/* form  */
+
+#message {
+  height: 123px;
+  width: 75%;
+  margin: 21px 0 15px 0;
+  border: 2px solid blue;
+  border-radius: 5px;
+}
+
+#email,
+#message {
+  border: 2px solid blue;
+  border-radius: 5px;
+  width: 75%;
+}
+
+.contact {
+  background: cornflowerblue;
+  padding: 24px 0 24px 0;
+  border-radius: 5px;
+}
+
+.send-btn {
+  font-size: 16px;
+  font-size: 16px;
+  padding: 10px 30px 10px 30px;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 740px) {
   body {
     margin: 2rem 0 0 0;
@@ -289,11 +337,31 @@ p {
   #myBtn2 {
     margin-right: 1rem;
   }
+
+  .guide {
+    text-align: start;
+    font-size: 12px;
+    color: blue;
+  }
+
+  .subtext {
+    font-size: 12px;
+  }
 }
 
 @media only screen and (max-width: 464px) {
   .reset-life {
     margin: -162px 12px 0 12px;
+  }
+
+  .suggestion h2 {
+    font-size: 17px;
+  }
+
+  .suggestion p {
+    font-size: 13px;
+    margin: 0 6% 0 6%;
+    margin-bottom: 2rem;
   }
 
   .label {
@@ -312,7 +380,8 @@ p {
   .game-section,
   .welcome-screen,
   .win-section,
-  .fail {
+  .fail,
+  .suggestion {
     border: 1rem solid rgba(0, 0, 255, 0.685);
     padding-top: 2rem;
     background: hsl(70, 31%, 85%);
@@ -426,22 +495,6 @@ p {
   cursor: pointer;
 }
 
-/* how to play modal */
-
-.subtext {
-  font-size: 12px;
-}
-
-.guide {
-  text-align: start;
-  font-size: 12px;
-  color: blue;
-}
-
-.head {
-  font-weight: bold;
-}
-
 /* help modal */
 .help {
   text-align: end;
@@ -465,7 +518,7 @@ p {
   margin: 0;
 }
 
-#myUL li a {
+#myUL li {
   border: 1px solid #ddd; /* Add a border to all links */
   margin-top: -1px; /* Prevent double borders */
   background-color: #f6f6f6; /* Grey background color */
@@ -492,6 +545,7 @@ p {
   background: #fff;
   cursor: pointer;
   font-size: 23px;
+  width: 64px;
 }
 
 #myBtn2:hover {

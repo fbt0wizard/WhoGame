@@ -1,45 +1,52 @@
-var randomNums = JSON.parse(localStorage.getItem("ranNum") || "[]"); 
+ 
+// const myCheck = [];
+// console.log(myCheck);
 
-var check = localStorage.getItem("ranNum");
+// function getRandomInt(max) {
+//     return Math.floor(Math.random() * max);
+//   }
 
-if(check == null) {
-    var nums = [1,2,3,4,5],
-    ranNums = [],
-    i = nums.length,
-    j = 0;
+// function runProgramme () {
+//     let randomNum = getRandomInt((5));
+//     console.log(randomNum);
+//     if(myCheck.includes(randomNum)) {
+//         runProgramme();
+//     } else {
+//     myCheck.push(randomNum);
+//     document.getElementById("looking").innerHTML = randomNum;
+//     console.log(myCheck);
+// }
+// var final = myCheck[myCheck.length - 1];
+// console.log(final);
+// }
 
-while (i--) {
-    j = Math.floor(Math.random() * (i+1));
-    ranNums.push(nums[j]);
-    nums.splice(j,1);
+
+// const myText = [];
+
+// function getIt () {
+//     let myInput = document.getElementById("myInput").value ;
+//     console.log(myInput);
+//     myText.push(myInput);
+//     console.log(myText);
+// }
+
+var check = ["boy", "girl", "woman", "female"];
+
+console.log(check);
+
+
+
+function runProgramme () {
+    check.length = 0;
+
+    console.log(check);
 }
-}
 
-if(check == null) {
-console.log(ranNums);
-let newSt = ranNums.toString();
-console.log(newSt);
 
-randomNums.push(newSt);
-localStorage.setItem("ranNum", JSON.stringify(randomNums));
 
-}
 
-let newStorage = localStorage.getItem("ranNum");
-console.log(newStorage);
 
-var string = newStorage;
 
-var index = 2;
-var index2 = 4;
-var index3 = 6;
-var index4 = 8;
-var index5 = 10;
 
-console.log(parseInt(string.charAt(index)));
-console.log(parseInt(string.charAt(index2)));
-console.log(parseInt(string.charAt(index3)));
-console.log(parseInt(string.charAt(index4)));
-console.log(parseInt(string.charAt(index5)));
 
-// localStorage.clear();
+

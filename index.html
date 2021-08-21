@@ -20,10 +20,9 @@
     <div class="first-section" id="firstSection">
       <header class="welcome">
         <h1>GUESS WHO?</h1>
-        <h2>
-          This is an educative game that is all about guessing <br />the name of
-          a porpular person
-        </h2>
+        <h3>
+          This game is all about guessing <br />the name of a porpular person
+        </h3>
       </header>
 
       <div class="body">
@@ -132,7 +131,9 @@
         <h1 id="user-name"></h1>
       </header>
       <div class="help">
-        <button id="myBtn2"><i class="fa fa-question-circle" aria-hidden="true"></i></button>
+        <button id="myBtn2">
+          <i class="fa fa-question-circle" aria-hidden="true"></i>
+        </button>
         <div id="myModal2" class="modal">
           <!-- Modal content -->
           <div class="modal-content">
@@ -141,33 +142,51 @@
               type="text"
               id="myInput"
               onkeyup="myFunction()"
-              placeholder= "Search for inputs.."
+              placeholder="Search for inputs.."
             />
             <div class="help-list">
+              <ul id="myUL">
+                <p>Some inputs you can try</p>
+                <li><a>Alive</a></li>
+                <li><a>Dead</a></li>
 
-            <ul id="myUL">
-              <li><a href="#">Alive</a></li>
-              <li><a href="#">Dead</a></li>
+                <li><a>Above50</a></li>
+                <li><a>Below50</a></li>
 
-              <li><a href="#">Above50</a></li>
-              <li><a href="#">Below50</a></li>
+                <li><a>Male</a></li>
+                <li><a>Female</a></li>
+                <li><a>Celebrity</a></li>
+                <li><a>Politician</a></li>
+                <li><a>Musician</a></li>
 
-              <li><a href="#">Male</a></li>
-              <li><a href="#">Female</a></li>
-              <li><a href="#">Celebrity</a></li>
-            </ul>
-          </div>
+                <li><a>Comedian</a></li>
+                <li><a>Singer</a></li>
+
+                <li><a>Canada</a></li>
+                <li><a>America</a></li>
+                <li><a>Nigeria</a></li>
+                <li><a>Africa</a></li>
+                <li><a>West Africa</a></li>
+
+                <li><a>Grammy</a></li>
+                <li><a>lives in Canada</a></li>
+
+                <li><a>lives in Nigeria</a></li>
+                <li><a>President</a></li>
+                <li><a>Governor</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="who" id="guess">
         <img src="/images/guess.svg" alt="Guess the person" />
-        <h2>Guess Who is this?</h2>
+        <h2>Guess Who this is?</h2>
       </div>
       <div class="reset-life">
         <div class="reset">
-          <button type="button" onclick="clearData()">Restart</button>
+          <button type="button" onclick="reset()">Restart</button>
         </div>
         <div class="life">
           <p><span id="counter">0</span>/15</p>
@@ -227,7 +246,7 @@
         <img src="/images/trophy.png" alt="" width="120px" />
       </div>
       <div class="start2">
-        <button class="play-again" id="startNow" onclick="clearData()">
+        <button class="play-again" id="startNow" onclick="playAgain()">
           Play Again
         </button>
       </div>
@@ -239,9 +258,43 @@
         instructions if you have to
       </h2>
       <div class="try-again">
-        <button class="start-now" id="startButton" onclick="clearData()">
+        <button class="start-now" id="startButton" onclick="fail()">
           Try Again
         </button>
+      </div>
+    </div>
+
+    <div class="suggestion" id="suggestion">
+      <h2>
+        Dear <span id="final"></span> you have revealed the whole
+        <br />characters in store
+      </h2>
+      <p>I want to thank you for playing my game and i hope you enjoyed it</p>
+      <p>Please take a minute to tell me how you feel</p>
+
+      <div class="contact">
+        <form action="#">
+          <div class="email">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="content">
+            <textarea
+              placeholder="Your Message"
+              class="form-in"
+              id="message"
+              required
+            ></textarea>
+          </div>
+          <div class="submit">
+            <input type="submit" value="Send Message" class="send-btn" />
+          </div>
+        </form>
       </div>
     </div>
 
@@ -249,7 +302,8 @@
       <h3>This is a javascrypt project by<br />Oladipo Mustapha</h3>
     </footer>
 
-    <script src="app1.js"></script>
+    <!-- <script src="app1.js"></script> -->
     <script src="modal.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
