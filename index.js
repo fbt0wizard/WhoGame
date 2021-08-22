@@ -8,16 +8,16 @@ function playAgain() {
   document.getElementById("answerText").value = "";
   var win = document.getElementById("winSection");
     if (win.style.display === "block") {
-      win.style.display = "none";
+      $("#winSection").fadeOut(500);
     } else {
-      win.style.display = "none";
+      $("#winSection").fadeOut(500);
     }
   
     var game = document.getElementById("welcomeScreen");
     if (game.style.display === "none") {
-      game.style.display = "block";
+      $("#welcomeScreen").fadeIn(500);
     } else {
-      game.style.display = "block";
+      $("#welcomeScreen").fadeIn(500);
     }
   
     var score = document.getElementById("marks");
@@ -37,16 +37,16 @@ function fail() {
   document.getElementById("answerText").value = "";
   var win = document.getElementById("playerFail");
     if (win.style.display === "block") {
-      win.style.display = "none";
+      $("#playerFail").fadeOut(500);
     } else {
-      win.style.display = "none";
+      $("#playerFail").fadeOut(500);
     }
   
     var game = document.getElementById("gameSection");
     if (game.style.display === "none") {
-      game.style.display = "block";
+      $("#gameSection").fadeIn(500);
     } else {
-      game.style.display = "block";
+      $("#gameSection").fadeIn(500);
     }
   
     var score = document.getElementById("marks");
@@ -65,16 +65,16 @@ function fail() {
 function reset() {
   var win = document.getElementById("gameSection");
     if (win.style.display === "block") {
-      win.style.display = "none";
+      $("#gameSection").fadeOut(500);
     } else {
-      win.style.display = "none";
+      $("#gameSection").fadeOut(500);
     }
   
     var game = document.getElementById("welcomeScreen");
     if (game.style.display === "none") {
-      game.style.display = "block";
+      $("#welcomeScreen").fadeIn(500);
     } else {
-      game.style.display = "block";
+      $("#welcomeScreen").fadeIn(500);
     }
   
     var score = document.getElementById("marks");
@@ -93,16 +93,16 @@ function gameComplete() {
   document.getElementById("final").innerHTML = userName;
   var win = document.getElementById("winSection");
     if (win.style.display === "block") {
-      win.style.display = "none";
+      $("#winSection").fadeOut(500);
     } else {
-      win.style.display = "none";
+      $("#winSection").fadeOut(500);
     }
   
     var game = document.getElementById("suggestion");
     if (game.style.display === "none") {
-      game.style.display = "block";
+      $("#suggestion").fadeIn(500);
     } else {
-      game.style.display = "block";
+      $("#suggestion").fadeIn(500);
     }
   
     var score = document.getElementById("marks");
@@ -123,20 +123,27 @@ function getInput() {
     document.getElementById("playerName").innerHTML = userName;
     document.getElementById("user-name").innerHTML = ("Let's Play," + " " + userName);
   
-    var home = document.getElementById("firstSection");
-    if (home.style.display === "block") {
-      home.style.display = "none";
-    } else {
-      home.style.display = "none";
-    }
+     var home = document.getElementById("firstSection");
+
+     if (home.style.display === "block") {
+      $("#firstSection").fadeOut(500);
+      
+
+ 
+     } else {
+       $("#firstSection").fadeOut(500);
+     }
   
-    var game = document.getElementById("welcomeScreen");
-    if (game.style.display === "none") {
-      game.style.display = "block";
-    } else {
-      game.style.display = "block";
-    }
+     var game = document.getElementById("welcomeScreen");
+    
+     if (game.style.display === "none") {
   
+      $("#welcomeScreen").fadeIn(500);
+      
+     } else {
+       $("#welcomeScreen").fadeIn(500);
+     }
+    
     var score = document.getElementById("marks");
     score.style.visibility = "hidden";
   
@@ -164,16 +171,16 @@ function openGame() {
 
      var home = document.getElementById("welcomeScreen");
      if (home.style.display === "block") {
-      home.style.display = "none";
+      $("#welcomeScreen").fadeOut(500);
       } else {
-          home.style.display = "none";
+        $("#welcomeScreen").fadeOut(500);
       }
   
         var game = document.getElementById("gameSection");
         if (game.style.display === "none") {
-          game.style.display = "block";
+          $("#gameSection").fadeIn(500);
         } else {
-          game.style.display = "block";
+          $("#gameSection").fadeIn(500);
   
           document.getElementById("answerText").value = "";
         }
@@ -262,15 +269,7 @@ function openGame() {
     if (data.length > 0) {
       document.getElementById("warning2").innerHTML = " ";
     }
-  
-    // // var raw = sessionStorage.getItem("gameInput");
-    // var storedResult = JSON.parse(raw);
-    // console.log(storedResult);
-  
-    // var wrongRaw = sessionStorage.getItem("wrongInput");
-    // var storeWrong = JSON.parse(wrongRaw);
-  
-    // console.log(storeWrong);
+
   
     // for Buhari
     if (randomNum == 0) {
@@ -282,16 +281,16 @@ function openGame() {
   
         var home = document.getElementById("gameSection");
         if (home.style.display === "block") {
-          home.style.display = "none";
+          $("#gameSection").fadeOut(1000);
         } else {
-          home.style.display = "none";
+          $("#gameSection").fadeOut(1000);
         }
   
         var game = document.getElementById("winSection");
         if (game.style.display === "none") {
-          game.style.display = "block";
+          $("#winSection").fadeIn(1000);
         } else {
-          game.style.display = "block";
+          $("#winSection").fadeIn(1000);
   
         }
   
@@ -312,15 +311,15 @@ function openGame() {
   
         var game = document.getElementById("gameSection");
         if (game.style.display === "block") {
-          game.style.display = "none";
+          $("#gameSection").fadeOut(1000);
         } else {
-          game.style.display = "none";
+          $("#gameSection").fadeOut(1000);
         }
         var game = document.getElementById("winSection");
         if (game.style.display === "none") {
-          game.style.display = "block";
+          $("#winSection").fadeIn(1000);
         } else {
-          game.style.display = "block";
+          $("#winSection").fadeIn(1000);
   
         }
   
@@ -340,15 +339,15 @@ function openGame() {
   
         var game = document.getElementById("gameSection");
         if (game.style.display === "block") {
-          game.style.display = "none";
+          $("#gameSection").fadeOut(1000);
         } else {
-          game.style.display = "none";
+          $("#gameSection").fadeOut(1000);
         }
         var game = document.getElementById("winSection");
         if (game.style.display === "none") {
-          game.style.display = "block";
+          $("#winSection").fadeIn(1000);
         } else {
-          game.style.display = "block";
+          $("#winSection").fadeIn(1000);
   
         }
   
@@ -365,15 +364,15 @@ function openGame() {
   
         var game = document.getElementById("gameSection");
         if (game.style.display === "block") {
-          game.style.display = "none";
+          $("#gameSection").fadeOut(1000);
         } else {
-          game.style.display = "none";
+          $("#gameSection").fadeOut(1000);
         }
         var game = document.getElementById("winSection");
         if (game.style.display === "none") {
-          game.style.display = "block";
+          $("#winSection").fadeIn(1000);
         } else {
-          game.style.display = "block";
+          $("#winSection").fadeIn(1000);
   
         }
   
@@ -392,15 +391,15 @@ function openGame() {
   
         var game = document.getElementById("gameSection");
         if (game.style.display === "block") {
-          game.style.display = "none";
+          $("#gameSection").fadeOut(1000);
         } else {
-          game.style.display = "none";
+          $("#gameSection").fadeOut(1000);
         }
         var game = document.getElementById("winSection");
         if (game.style.display === "none") {
-          game.style.display = "block";
+          $("#winSection").fadeIn(1000);
         } else {
-          game.style.display = "block";
+          $("#winSection").fadeIn(1000);
   
         }
   
@@ -419,15 +418,15 @@ function openGame() {
   
         var game = document.getElementById("gameSection");
         if (game.style.display === "block") {
-          game.style.display = "none";
+          $("#gameSection").fadeOut(1000);
         } else {
-          game.style.display = "none";
+          $("#gameSection").fadeOut(1000);
         }
         var game = document.getElementById("winSection");
         if (game.style.display === "none") {
-          game.style.display = "block";
+          $("#winSection").fadeIn(1000);
         } else {
-          game.style.display = "block";
+          $("#winSection").fadeIn(1000);
   
         }
   
@@ -469,16 +468,16 @@ function openGame() {
   
       var game = document.getElementById("gameSection");
       if (game.style.display === "block") {
-        game.style.display = "none";
+        $("#gameSection").fadeOut(500);
       } else {
-        game.style.display = "none";
+        $("#gameSection").fadeOut(500);
       }
   
       var game = document.getElementById("playerFail");
       if (game.style.display === "none") {
-        game.style.display = "block";
+        $("#playerFail").fadeIn(500);
       } else {
-        game.style.display = "block";
+        $("#playerFail").fadeIn(500);
   
       }
   

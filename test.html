@@ -8,19 +8,62 @@
     <link rel="stylesheet" href="test.css">
 </head>
 <body>
+    <body>
+        <p>Demonstrate fadeIn() with different parameters.</p>
 
-    <button type="button" onclick="runProgramme()">Run Function</button>
-
-    <div class="watch">
-        <h1 id="looking"></h1>
-    </div>
-
-    <div class="run">
-        <form action="">
-        <input type="text" name="text" id="myInput" required>
-        <button type="button" onclick="getIt()">Check It</button>
-    </form>
-    </div>
-    <script src="/app.js"></script>
+       
+        
+        <div id="div1" >
+            <button onclick="run()">Click to fade in boxes</button><br><br>
+            <div class="suggestion" id="suggestion">
+                <h2>
+                  Dear <span id="final"></span> you have revealed the whole
+                  <br />characters in store
+                </h2>
+                <p>I want to thank you for playing my game and i hope you enjoyed it</p>
+                <p>Please take a minute to tell me how you feel</p>
+          
+                <div class="contact">
+                  <form action="#">
+                    <div class="email">
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Email"
+                        required
+                      />
+                    </div>
+                    <div class="content">
+                      <textarea
+                        placeholder="Your Message"
+                        class="form-in"
+                        id="message"
+                        required
+                      ></textarea>
+                    </div>
+                    <div class="submit">
+                      <input type="submit" value="Send Message" class="send-btn" />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div><br>
+        <div id="div2" style="display:none;">
+            <div class="fail" id="playerFail">
+                <h2>
+                  <span id="lost"></span>, you got this and you shoud try again <br />read
+                  instructions if you have to
+                </h2>
+                <div class="try-again">
+                  <button class="start-now" id="startButton" onclick="fail()">
+                    Try Again
+                  </button>
+                </div>
+              </div></div><br>
+        <!-- <div id="div3" style="display:none;"><img src="/images/2pac.jpg" alt="" width="100px"></div> -->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="app.js"></script>
 </body>
 </html>

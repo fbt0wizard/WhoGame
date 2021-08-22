@@ -75,8 +75,9 @@ body {
 }
 
 .game-section {
-  display: none;
+  /* visibility: hidden; */
   margin-top: -33px;
+  transition: linear 2s all;
 }
 
 #user-name {
@@ -204,7 +205,6 @@ body {
 
 .win-section {
   text-align: center;
-  display: none;
 }
 
 .win-section h2,
@@ -214,13 +214,11 @@ p {
 
 .welcome-screen {
   text-align: center;
-  display: none;
   margin-top: 6rem;
 }
 
 .suggestion {
   text-align: center;
-  display: none;
 }
 
 .suggestion h2 {
@@ -228,7 +226,6 @@ p {
 }
 
 .fail {
-  display: none;
   text-align: center;
   margin-top: 3rem;
 }
@@ -375,6 +372,8 @@ p {
   .welcome-screen h2 {
     font-size: 19px;
   }
+
+
 
   .first-section,
   .game-section,
