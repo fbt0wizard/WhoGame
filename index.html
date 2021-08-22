@@ -17,7 +17,13 @@
     />
   </head>
   <body>
+<div id="celebration" style="position: absolute; display: none;">
+  <div id="balloon-container">
+  </div>
+</div>
+
     <div class="first-section" id="firstSection">
+      
       <header class="welcome">
         <h1>GUESS WHO?</h1>
         <h3>
@@ -41,7 +47,7 @@
               required
             />
 
-            <div class="start-game">
+            <div class="start-game"  style="position: relative;">
               <button
                 type="button"
                 value=""
@@ -67,7 +73,7 @@
             <p class="subtext">
               This is a game that require a lot of thinking, there is a very
               porpular(well known all over the world) person behind the unknown
-              picture, all you have to do is to narrow down your questions(15)
+              picture, all you have to do is narrow down your questions(15)
               to guide you in guessing the name of the person behind the unknown
               picture, i have written the program to respond to your input
               either it's correct or not base on a local database file, read
@@ -216,6 +222,9 @@
               placeholder="input answer"
               required
             />
+            <div class="warning-space">
+              <label for="warning">Dont add space at the end of your input !!!</label>
+            </div>
             <div>
               <button type="button" id="checkButton" onclick="getInput2()">
                 CHECK ANSWER
@@ -245,7 +254,7 @@
       <div class="trophy">
         <img src="/images/trophy.png" alt="" width="120px" />
       </div>
-      <div class="start2">
+      <div class="start2" style="position: relative;">
         <button class="play-again" id="startNow" onclick="playAgain()">
           Play Again
         </button>

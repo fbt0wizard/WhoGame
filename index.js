@@ -9,8 +9,10 @@ function playAgain() {
   var win = document.getElementById("winSection");
     if (win.style.display === "block") {
       $("#winSection").fadeOut(500);
+      $("#celebration").fadeOut();
     } else {
       $("#winSection").fadeOut(500);
+      $("#celebration").fadeOut();
     }
   
     var game = document.getElementById("welcomeScreen");
@@ -289,8 +291,10 @@ function openGame() {
         var game = document.getElementById("winSection");
         if (game.style.display === "none") {
           $("#winSection").fadeIn(1000);
+          $("#celebration").fadeIn();
         } else {
           $("#winSection").fadeIn(1000);
+          $("#celebration").fadeIn();
   
         }
   
@@ -318,8 +322,10 @@ function openGame() {
         var game = document.getElementById("winSection");
         if (game.style.display === "none") {
           $("#winSection").fadeIn(1000);
+          $("#celebration").fadeIn();
         } else {
           $("#winSection").fadeIn(1000);
+          $("#celebration").fadeIn();
   
         }
   
@@ -346,8 +352,10 @@ function openGame() {
         var game = document.getElementById("winSection");
         if (game.style.display === "none") {
           $("#winSection").fadeIn(1000);
+          $("#celebration").fadeIn();
         } else {
           $("#winSection").fadeIn(1000);
+          $("#celebration").fadeIn();
   
         }
   
@@ -371,8 +379,10 @@ function openGame() {
         var game = document.getElementById("winSection");
         if (game.style.display === "none") {
           $("#winSection").fadeIn(1000);
+          $("#celebration").fadeIn();
         } else {
           $("#winSection").fadeIn(1000);
+          $("#celebration").fadeIn();
   
         }
   
@@ -398,8 +408,10 @@ function openGame() {
         var game = document.getElementById("winSection");
         if (game.style.display === "none") {
           $("#winSection").fadeIn(1000);
+          $("#celebration").fadeIn();
         } else {
           $("#winSection").fadeIn(1000);
+          $("#celebration").fadeIn();
   
         }
   
@@ -425,8 +437,10 @@ function openGame() {
         var game = document.getElementById("winSection");
         if (game.style.display === "none") {
           $("#winSection").fadeIn(1000);
+          $("#celebration").fadeIn();
         } else {
           $("#winSection").fadeIn(1000);
+          $("#celebration").fadeIn();
   
         }
   
