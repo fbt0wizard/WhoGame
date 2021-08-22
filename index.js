@@ -276,7 +276,7 @@ function openGame() {
     // for Buhari
     if (randomNum == 0) {
       if (data.includes("buhari") || data.includes("muhammadu buhari")) {
-        let newData = localStorage.getItem('userEntry');
+        let newData = userName;
         document.getElementById("pName").innerHTML = newData;
         document.getElementById("characterImg").innerHTML = "<img src=\"images/buhari.jpg\" width=\"250px\">";
         document.getElementById("aboutChar").innerHTML = ("Muhamemmed Buhari is the president of Nigeria")
@@ -308,7 +308,7 @@ function openGame() {
     if (randomNum == 1) {
   
       if (data.includes("biden") || data.includes("joe biden")) {
-        let newData = localStorage.getItem('userEntry');
+        let newData = userName;
         document.getElementById("pName").innerHTML = newData;
         document.getElementById("characterImg").innerHTML = "<img src=\"images/biden.jpg\" width=\"250px\">";
         document.getElementById("aboutChar").innerHTML = ("Joe Biden is the president of USA")
@@ -338,7 +338,7 @@ function openGame() {
     if (randomNum == 2) {
   
       if (data.includes("justin") || data.includes("bieber")) {
-        let newData = localStorage.getItem('userEntry');
+        let newData = userName;
         document.getElementById("pName").innerHTML = newData;
         document.getElementById("characterImg").innerHTML = "<img src=\"images/justin.jpg\" width=\"250px\">";
         document.getElementById("aboutChar").innerHTML = ("Justin Bieber is a canadian born song writer")
@@ -365,7 +365,7 @@ function openGame() {
     // Rihanna
     if (randomNum == 3) {
       if (data.includes("rihanna")) {
-        let newData = localStorage.getItem('userEntry');
+        let newData = userName;
         document.getElementById("pName").innerHTML = newData;
         document.getElementById("characterImg").innerHTML = "<img src=\"images/rihana.jpg\" width=\"250px\">";
         document.getElementById("aboutChar").innerHTML = ("")
@@ -394,7 +394,7 @@ function openGame() {
     // Micheal jackson
     if (randomNum == 4) {
       if (data.includes("micheal jackson")) {
-        let newData = localStorage.getItem('userEntry');
+        let newData = userName;
         document.getElementById("pName").innerHTML = newData;
         document.getElementById("characterImg").innerHTML = "<img src=\"images/micheal.jpg\" width=\"250px\">";
         document.getElementById("aboutChar").innerHTML = ("Micheal Joseph Jackson is an American pop singer and dancer")
@@ -423,7 +423,7 @@ function openGame() {
     // 2pac
     if (randomNum == 5) {
       if (data.includes("2pac") || data.includes("tupac") || data.includes("2pac shakur") || data.includes("Tupac shakur")) {
-        let newData = localStorage.getItem('userEntry');
+        let newData = userName;
         document.getElementById("pName").innerHTML = newData;
         document.getElementById("characterImg").innerHTML = "<img src=\"images/2pac.jpg\" width=\"250px\">";
         document.getElementById("aboutChar").innerHTML = ("Tupac Shakur is a late black American Rapper")
