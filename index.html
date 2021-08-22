@@ -281,7 +281,7 @@
       <p>I want to thank you for playing my game and i hope you enjoyed it</p>
       <p>Please take a minute to tell me how you feel</p>
 
-      <div class="contact">
+      <div class="contact" style="position: relative;">
         <form action="#">
           <div class="email">
             <input
@@ -301,7 +301,13 @@
             ></textarea>
           </div>
           <div class="submit">
-            <input type="submit" value="Send Message" class="send-btn" />
+            <div class="send-cont">
+              <input type="submit" value="Send Message" class="send-btn" />
+            </div>
+            <div class="send">
+              <button type="button" class="replay" onclick="replay()">Replay</button>
+            </div>
+            
           </div>
         </form>
       </div>

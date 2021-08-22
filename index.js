@@ -91,6 +91,33 @@ function reset() {
     document.getElementById("counter").innerHTML = "0";
 }
 
+function replay () {
+  var win = document.getElementById("suggestion");
+    if (win.style.display === "block") {
+      $("#suggestion").fadeOut(500);
+    } else {
+      $("#suggestion").fadeOut(500);
+    }
+  
+    var game = document.getElementById("welcomeScreen");
+    if (game.style.display === "none") {
+      $("#welcomeScreen").fadeIn(500);
+    } else {
+      $("#welcomeScreen").fadeIn(500);
+    }
+  
+    var score = document.getElementById("marks");
+    score.style.visibility = "hidden";
+
+    clearRight();
+    checker();
+    clearCounter();
+
+    document.getElementById("listUp").innerHTML = "";
+    document.getElementById("listUp2").innerHTML = "";
+    document.getElementById("counter").innerHTML = "0";
+}
+
 function gameComplete() {
   document.getElementById("final").innerHTML = userName;
   var win = document.getElementById("winSection");

@@ -13,6 +13,12 @@ body {
   background-repeat: no-repeat;
 }
 
+.submit {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 33px;
+}
+
 /* balloon here */
 #balloon-container {
   height: 100vh;
@@ -376,9 +382,25 @@ p {
 }
 
 .contact {
-  background: cornflowerblue;
+  background: #ffffff26;
   padding: 24px 0 24px 0;
   border-radius: 5px;
+}
+
+.replay {
+  font-size: 16px;
+  font-size: 16px;
+  padding: 10px 47px 10px 47px;
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid blue;
+  border-radius: 6px;
+  color: blue;
+}
+
+.replay:hover {
+  background: blue;
+  color: #fff;
 }
 
 .send-btn {
@@ -386,6 +408,15 @@ p {
   font-size: 16px;
   padding: 10px 30px 10px 30px;
   cursor: pointer;
+  background: #fff;
+  border: 2px solid blue;
+  border-radius: 6px;
+  color: blue;
+}
+
+.send-btn:hover {
+  background: blue;
+  color: #fff;
 }
 
 @media only screen and (max-width: 740px) {
@@ -411,6 +442,20 @@ p {
 @media only screen and (max-width: 464px) {
   .reset-life {
     margin: -162px 12px 0 12px;
+  }
+
+  .submit {
+    margin-right: 22px;
+  }
+
+  .replay {
+    font-size: 12px;
+    padding: 9px 14px 9px 14px;
+  }
+  
+  .send-btn {
+    font-size: 12px;
+    padding: 9px 20px 9px 20px;
   }
 
 
