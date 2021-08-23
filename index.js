@@ -141,7 +141,8 @@ function gameComplete() {
 
 
 function getInput() {
-    var userInput = document.getElementById('userInput').value;
+    var rawInput = document.getElementById('userInput').value;
+    var userInput = rawInput.trim();
     userName.push(userInput);
   
     if (userInput.length == 0) {
@@ -287,7 +288,8 @@ function openGame() {
     }
   
   
-    var fresh = document.getElementById('answerText').value;
+    var rawData = document.getElementById('answerText').value;
+    var fresh = rawData.trim();
     let data = fresh.toLowerCase();
   
     if (data.length == 0) {
