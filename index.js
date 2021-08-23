@@ -26,7 +26,6 @@ function playAgain() {
     score.style.visibility = "hidden";
 
     clearRight();
-    checker();
     clearCounter();
 
     document.getElementById("listUp").innerHTML = "";
@@ -55,7 +54,6 @@ function fail() {
     score.style.visibility = "hidden";
 
     clearRight();
-    checker();
     clearCounter();
 
     document.getElementById("listUp").innerHTML = "";
@@ -83,7 +81,6 @@ function reset() {
     score.style.visibility = "hidden";
 
     clearRight();
-    checker();
     clearCounter();
 
     document.getElementById("listUp").innerHTML = "";
@@ -95,8 +92,10 @@ function replay () {
   var win = document.getElementById("suggestion");
     if (win.style.display === "block") {
       $("#suggestion").fadeOut(500);
+      $("#celebration").fadeOut(500);
     } else {
       $("#suggestion").fadeOut(500);
+      $("#celebration").fadeOut(500);
     }
   
     var game = document.getElementById("welcomeScreen");
@@ -110,7 +109,6 @@ function replay () {
     score.style.visibility = "hidden";
 
     clearRight();
-    checker();
     clearCounter();
 
     document.getElementById("listUp").innerHTML = "";
@@ -192,7 +190,6 @@ function getRandomInt(max) {
 
 function openGame() {
     let randomGen = getRandomInt((6));
-    console.log(randomGen);
     if(randomArray.includes(randomGen)) {
         openGame();
     } else {
@@ -233,16 +230,11 @@ function openGame() {
     wrongInput.splice(0, wrongInput.length);
   }
 
-  function checker () {
-    console.log(rightInput);
-    console.log(wrongInput);
-  }
 
   function getInput2() {
 
     var randomNum = randomArray[randomArray.length - 1];
 
-    console.log(randomNum);
 
     let buhar = ["black", "nigerian", "current president", "nigeria", "politician", "alive", "african", "africa",
       "above50", "male", "president", "leader", "head of state", "educated", "elected", "west africa",
@@ -506,7 +498,6 @@ function openGame() {
     if (myFunctionCalls > 15) {
       
       let looser = userName;
-      console.log(looser);
       document.getElementById("lost").innerHTML = looser;
   
       var game = document.getElementById("gameSection");
@@ -537,7 +528,6 @@ function openGame() {
         score.style.visibility = "hidden";
       }, 3000)
       let newData = data.toString()
-      console.log(newData);
   
       rightInput.push(newData);
       var show = rightInput;
@@ -550,7 +540,6 @@ function openGame() {
         score2.style.visibility = "hidden";
       }, 3000);
       let newData = data.toString()
-      console.log(newData);
       wrongInput.push(newData);
   
       var nowShow = wrongInput;
